@@ -1,0 +1,23 @@
+{
+  "name": "duthienkt.github.io",
+  "version": "1.0.0",
+  "description": "DuThien's projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duthienkt/duthienkt.github.io.git"
+  },
+  "author": "Pham Quoc Du Thien",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duthienkt/duthienkt.github.io/issues"
+  },
+  "private": true,
+  "homepage": "https://duthienkt.github.io",
+  "dependencies": {
+    "absol": "^1.7.7"
+  }
+}

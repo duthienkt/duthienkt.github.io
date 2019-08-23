@@ -1,0 +1,9 @@
+node_modules
+*.log
+.vscode
+static
+package-lock.json
+*/package-lock.json
+AppData
+dist
+draft
