@@ -1,0 +1,59 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+}
+
+.as-app,
+.as-act {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.as-bar-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2em;
+    background-color: rgb(196, 196, 198);
+    z-index: 34;
+    -webkit-box-shadow: 2px 2px 9px 0px rgba(20, 20, 20, 0.2);
+    -moz-box-shadow: 2px 2px 9px 0px rgba(20, 20, 20, 0.2);
+    box-shadow: 2px 2px 9px 0px rgba(20, 20, 20, 0.2);
+}
+
+
+.as-bar-left {
+    position: absolute;
+    left: 0;
+    top: 2em;
+    bottom: 1.3em;
+    width: 3em;
+    background-color: rgb(204, 204, 204);
+}
+
+.as-explore-container {
+    position: absolute;
+    left: 3em;
+    top: 2em;
+    bottom: 10.3em;
+    width: 18em;
+    background-color: rgb(230, 230, 230);
+    z-index: 31;
+}
+
+.as-explore-container>div {
+    width: 100%;
+    height: 100%;
+}
+
+.as-behind {
+    z-index: -2000;
+    opacity: 0;
+    visibility: hidden;
+}

@@ -1,0 +1,15 @@
+{
+    "name": "absol/src",
+    "type": "FOLDER",
+    "src":"https://raw.githubusercontent.com/duthienkt/absol/master/readme.md",
+    "content": [
+        {
+            "name": "AppPattern",
+            "type": "FOLDER"
+        },
+        {
+            "name": "Color",
+            "type": "FOLDER"
+        }
+    ]
+}

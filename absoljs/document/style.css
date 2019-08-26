@@ -1,0 +1,48 @@
+.as-act-help {
+}
+
+.as-act-help .title-text {
+    margin-left: 1em;
+}
+
+.as-act-help button.back-btn {
+    border: none;
+    height: 100%;
+    width: 2em;
+    font-size: 1em;
+    background-color: transparent;
+    color: rgb(169, 169, 170);
+    outline: none;
+}
+
+.as-act-help button.back-btn:hover {
+    color: rgb(69, 69, 71);
+    background-color: rgb(169, 169, 169, 0.1);
+}
+
+.as-act-help button.back-btn:active {
+    color: black;
+    background-color: rgb(169, 169, 169, 0.5);
+}
+
+.as-act-help .as-bar-left,
+.as-act-help .as-explore-container {
+    bottom: 0;
+}
+
+.as-act-help .as-explore-container {
+    overflow-y: auto;
+}
+
+
+.as-document-container {
+    position: absolute;
+    left: 21em;
+    right: 0;
+    top: 2em;
+    bottom: 0;
+}
+
+.as-document-container > .as-document{
+    margin: 1em;
+}
