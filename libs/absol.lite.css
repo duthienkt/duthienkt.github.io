@@ -1,0 +1,7932 @@
+/*** module: node_modules/absol-acomp/css/default.css ***/
+:root {
+    --as-input-height: 30px;
+    --as-input-font-size: 14px;
+    --as-input-font-family: Arial, Helvetica, sans-serif;
+    --as-input-vertical-padding: 0.3571em;
+    --as-input-horizontal-padding: 0.5em;
+    --as-context-menu-font-size: 14px;
+    --as-context-font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/*** module: node_modules/absol-acomp/css/autocompleteinput.css ***/
+.absol-autocomplete-input {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    border: solid 1px #d6d6d6;
+}
+
+.absol-autocomplete-input.absol-disabled {
+    pointer-events: none;
+    color: rgb(84, 84, 84);
+    background-color: rgb(235, 235, 228);
+}
+
+.absol-autocomplete-input>input {
+    min-width: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+}
+
+
+.absol-autocomplete-input-dropdown {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    min-width: 100%;
+    z-index: 1005;
+    border: solid 1px rgb(169, 169, 169);
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.absol-autocomplete-input-dropdown .as-bscroller{
+    overflow-y: auto;
+}
+
+.absol-autocomplete-input-dropdown.top {
+    top: auto;
+    bottom: 100%;
+}
+
+.absol-autocomplete-input-item {
+    height: 30px;
+}
+
+.absol-autocomplete-input-item:hover {
+    background-color: rgba(169, 169, 169, 0.18605);
+    cursor: pointer;
+}
+
+.absol-autocomplete-input-item.active,
+.absol-autocomplete-input-item.active:hover {
+    background-color: rgba(169, 169, 169, 0.37209);
+}
+
+.absol-autocomplete-input-item-text {
+    line-height: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/*** module: node_modules/absol-acomp/css/bscroller.css ***/
+/* OLD module */
+
+.absol-bscroller {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(151, 151, 151, 0.4) rgba(220, 220, 220, 0.4);
+    overflow: auto;
+}
+
+
+.absol-bscroller::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.absol-bscroller::-webkit-scrollbar-track {
+    background: rgba(220, 220, 220, 0.4);
+}
+
+.absol-bscroller::-webkit-scrollbar-thumb {
+    background: rgba(182, 182, 182, 0.4);
+}
+
+.absol-bscroller::-webkit-scrollbar-thumb:hover {
+    background: rgba(32, 32, 32, 0.4);
+}
+
+.absol-bscroller::-webkit-scrollbar-thumb:active {
+    background: rgba(13, 13, 13, 0.6);
+}
+
+.absol-bscroller.dark,
+.dark .absol-bscroller {
+    scrollbar-color: rgba(104, 104, 104, 0.4) rgba(35, 35, 35, 0.4);
+}
+
+
+.absol-bscroller.dark::-webkit-scrollbar-track,
+.dark .absol-bscroller::-webkit-scrollbar-track {
+    background: rgba(35, 35, 35, 0.4);
+}
+
+.absol-bscroller.dark::-webkit-scrollbar-thumb,
+.dark .absol-bscroller::-webkit-scrollbar-thumb {
+    background: rgba(73, 73, 73, 0.4);
+}
+
+.absol-bscroller.dark::-webkit-scrollbar-thumb:hover,
+.dark .absol-bscroller::-webkit-scrollbar-thumb:hover {
+    background: rgba(223, 223, 223, 0.4);
+}
+
+.absol-bscroller.dark::-webkit-scrollbar-thumb:active,
+.dark .absol-bscroller::-webkit-scrollbar-thumb:active {
+    background: rgba(242, 242, 242, 0.6);
+}
+
+/*******************************************/
+.as-bscroller {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(151, 151, 151, 0.4) rgba(220, 220, 220, 0.4);
+}
+
+
+.as-bscroller::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.as-bscroller::-webkit-scrollbar-track {
+    background: rgba(220, 220, 220, 0.4);
+}
+
+.as-bscroller::-webkit-scrollbar-thumb {
+    background: rgba(182, 182, 182, 0.4);
+}
+
+.as-bscroller::-webkit-scrollbar-thumb:hover {
+    background: rgba(32, 32, 32, 0.4);
+}
+
+.as-bscroller::-webkit-scrollbar-thumb:active {
+    background: rgba(13, 13, 13, 0.6);
+}
+
+.as-bscroller.dark,
+.dark .as-bscroller,
+.as-dark .as-bscroller,
+.as-dark.as-bscroller
+{
+    scrollbar-color: rgba(104, 104, 104, 0.4) rgba(150, 150, 150, 0.4);
+}
+
+
+.as-bscroller.dark::-webkit-scrollbar-track,
+.dark .as-bscroller::-webkit-scrollbar-track,
+.as-dark .as-bscroller::-webkit-scrollbar-track,
+.as-dark.as-bscroller::-webkit-scrollbar-track
+{
+    background: rgba(150, 150, 150, 0.4);
+}
+
+.as-bscroller.dark::-webkit-scrollbar-thumb,
+.dark .as-bscroller::-webkit-scrollbar-thumb,
+.as-dark .as-bscroller::-webkit-scrollbar-thumb,
+.as-dark.as-bscroller::-webkit-scrollbar-thumb
+{
+    background: rgba(104, 104, 104, 0.4);
+}
+
+.as-bscroller.dark::-webkit-scrollbar-thumb:hover,
+.dark .as-bscroller::-webkit-scrollbar-thumb:hover,
+.as-dark .as-bscroller::-webkit-scrollbar-thumb:hover,
+.as-dark.as-bscroller::-webkit-scrollbar-thumb:hover
+{
+    background: rgba(223, 223, 223, 0.4);
+}
+
+.as-bscroller.dark::-webkit-scrollbar-thumb:active,
+.dark .as-bscroller::-webkit-scrollbar-thumb:active,
+.as-dark .as-bscroller::-webkit-scrollbar-thumb:active,
+.as-dark.as-bscroller::-webkit-scrollbar-thumb:active
+{
+    background: rgba(242, 242, 242, 0.6);
+}
+
+/*** module: node_modules/absol-acomp/css/boardtable.css ***/
+.as-has-board-table-drag,
+.as-has-board-table-drag * {
+    cursor: grabbing;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+}
+
+
+
+.as-board-table {
+    overflow: visible;
+    position: relative;
+
+}
+
+.as-board-drag-zone {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+}
+
+
+.as-board {
+    white-space: normal;
+    box-sizing: border-box;
+    position: relative;
+    vertical-align: middle;
+}
+
+/**
+Bug note: don't put fixed position element to a element which has transform
+ */
+.as-board-moving {
+    transform-origin: 30% 55%;
+    transform: rotate(5deg);
+    transition: transform 0.05s;
+    user-select: none;
+    pointer-events: none;
+    position: fixed !important;
+    z-index: 2000;
+}
+
+
+.as-board-place-holder {
+    opacity: 0.3;
+}
+
+.as-board-table-prevent-context {
+    position: fixed;
+    --x: -10000px;
+    --y: -10000px;
+    left: calc(var(--x) - 100px);
+    top: calc(var(--y) - 100px);
+    opacity: 0;
+    z-index: 100000000;
+    width: 200px;
+    height: 200px;
+    cursor: default;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+}
+
+/*** module: node_modules/absol-acomp/css/hanger.css ***/
+.as-has-hanger-drag,
+.as-has-hanger-drag * {
+    touch-action: none;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+}
+
+/*** module: node_modules/absol-acomp/css/buttonarray.css ***/
+.as-button-array {
+    font-size: 14px;
+    border: 1px solid #006ce5;
+    display: inline-block;
+    border-radius: 0.2em;
+    overflow: hidden;
+}
+
+.as-button-array-item {
+    text-align: center;
+    font-size: inherit;
+    height: 2em;
+    border: none;
+    box-sizing: border-box;
+    padding-left: 0.35714em;
+    padding-right: 0.35714em;
+    outline: none;
+    color: #006ce5;
+    background-color: white;
+    border-radius: 0;
+    transition: background-color 0.1s, color 0.1s;
+    margin: 0;
+}
+
+.as-button-array-item:not(:first-child) {
+    border-left: 1px solid #006ce5;
+    border-right: none;
+}
+
+
+.as-button-array-item.as-active {
+    color: white;
+    background-color: #006ce5;
+}
+
+/*** module: node_modules/absol-acomp/css/buttonrange.css ***/
+.as-button-range-wrapper {
+    border-top: 1px solid rgb(209, 209, 213);
+    border-bottom: 1px solid rgb(209, 209, 213);
+}
+
+.as-button-range {
+    position: relative;
+    overflow-y: hidden;
+    height: var(--height);
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    --underline-left: 0;
+    --underline-width: 0;
+    --height: 2em;
+}
+
+.as-button-range-scroller {
+    font-size: inherit;
+    height: calc(var(--height) + 17px);
+    box-sizing: border-box;
+    overflow-x: scroll;
+    position: absolute;
+    top: 0;
+    left: 0.5em;
+    right: 0.5em;
+    white-space: nowrap;
+}
+
+.as-button-range-scroller::after {
+    content: "";
+    position: absolute;
+    left: var(--underline-left);
+    width: var(--underline-width);
+    height: 0.2em;
+    top: calc(var(--height) - 0.2em);
+    background-color: rgb(0, 106, 255);
+    transition: left 0.2s, width 0.2s;
+}
+
+.as-button-range-left-ctn,
+.as-button-range-right-ctn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.as-button-range-right-ctn::after,
+.as-button-range-left-ctn::before {
+    content: "";
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.as-button-range-left-ctn {
+    left: 0;
+}
+
+.as-button-range-right-ctn {
+    right: 0;
+}
+
+.as-button-range-right-btn,
+.as-button-range-left-btn {
+    font-size: inherit;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    border: none;
+    outline: none;
+    color: rgb(0, 106, 266);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 0.5em;
+    overflow: hidden;
+}
+
+.as-button-range-left-btn {
+    -webkit-box-shadow: 1em 2px 1.5em -1em rgba(255, 255, 255, 0.62);
+    -moz-box-shadow: 1em 2px 1.5em -1em rgba(255, 255, 255, 0.62);
+    box-shadow: 1em 2px 1.5em -1em rgba(255, 255, 255, 0.62);
+}
+
+.as-button-range-right-btn {
+    -webkit-box-shadow: -1em 2px 1.5em -1em rgba(255, 255, 255, 0.62);
+    -moz-box-shadow: -1em 2px 1.5em -1em rgba(255, 255, 255, 0.62);
+    box-shadow: -1em 2px 1.5em -1em rgba(255, 255, 255, 0.62);
+}
+
+.as-button-range-right-btn polygon,
+.as-button-range-left-btn polygon {
+    fill: #2488FF;
+}
+
+.as-button-range-right-btn:disabled,
+.as-button-range-left-btn:disabled {
+    display: none;
+}
+
+.as-button-range-left-btn > svg,
+.as-button-range-right-btn > svg {
+    width: 1.25em;
+    height: 1.25em;
+    margin-left: -0.25em;
+    margin-right: -0.25em;
+    vertical-align: middle;
+}
+
+
+.as-button-range-item {
+    outline: none;
+    font-size: inherit;
+    padding: 0 0.5em;
+    margin: 0;
+    height: var(--height);
+    border: none;
+    background-color: transparent;
+    color: black;
+}
+
+.as-button-range-item.as-active {
+    color: rgb(87, 157, 255);
+}
+
+/*** module: node_modules/absol-acomp/css/calendarinput.css ***/
+.absol-calendar-input {
+    font-size: 14px;
+    width: 7em;
+    height: 2em;
+    box-sizing: content-box;
+    display: inline-block;
+    vertical-align: middle;
+    border: solid 1px #d6d6d6;
+    border-radius: 0.2em;
+}
+
+.absol-calendar-input>input {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+.absol-calendar-input>input:hover,
+.absol-calendar-input>input:focus {
+    color: red;
+}
+
+.absol-calendar-input.absol-disabled {
+    pointer-events: none;
+}
+
+.absol-calendar-input.absol-disabled input {
+    color: rgb(169, 169, 171);
+}
+
+/*** module: node_modules/absol-acomp/css/scroller.css ***/
+.absol-vscroller {
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+.absol-vscroller.disabled>.absol-vscroller-viewport {
+    overflow-y: visible;
+    margin-right: 0px;
+    min-width: 100%;
+}
+
+.absol-vscroller.disabled {
+    overflow: visible;
+    overflow-x: visible;
+
+}
+
+
+.absol-vscroller-viewport {
+    overflow-y: scroll;
+    box-sizing: content-box;
+
+}
+
+.absol-vscroller>.absol-vscroller-viewport {
+    max-height: 100%;
+}
+
+.absol-vscroller.limited-height>.absol-vscroller-viewport {
+    max-height: inherit;
+}
+
+
+/************  hscroller  ***********/
+.absol-hscroller {
+    position: relative;
+    overflow-y: hidden;
+}
+
+.absol-hscroller.disabled {
+    overflow: visible;
+    overflow-y: visible;
+}
+
+.absol-hscroller-viewport {
+    overflow-x: scroll;
+    box-sizing: content-box;
+    min-height: calc(100% + 17px);
+}
+
+.absol-hscroller.disabled>.absol-hscroller-viewport {
+    overflow-x: visible;
+    margin-bottom: 0px;
+}
+
+
+.absol-hscroller>.absol-hscroller-viewport {
+    max-width: 100%;
+}
+
+
+/********** scroll bar *********************/
+.absol-scrollbar-force-modal {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    z-index: 1000000;
+}
+
+.absol-scrollbar-container {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+.absol-scrollbar-container.vertical {
+    top: 0;
+    width: 7px;
+}
+
+.absol-scrollbar-container.horizontal {
+    height: 7px;
+    left: 0;
+}
+
+.absol-scrollbar-container>.absol-scrollbar {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+.absol-scrollbar-container.vertical>.absol-scrollbar>.absol-scrollbar-button {
+    left: 1px;
+    right: 1px;
+    top: 0;
+}
+
+.absol-scrollbar-container.horizontal>.absol-scrollbar>.absol-scrollbar-button {
+    top: 1px;
+    bottom: 1px;
+    left: 0;
+}
+
+.absol-scrollbar {
+    position: relative;
+    background: transparent;
+}
+
+.absol-scrollbar-button {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+}
+
+
+.absol-scrollbar.absol-hidden {
+    visibility: hidden;
+}
+
+/*** module: node_modules/absol-acomp/css/chromecalendar.css ***/
+.absol-chrome-calendar {
+    display: inline-block;
+    font-family: Arial;
+    font-size: 14px;
+    padding: 0.6em;
+    border: solid 1px rgb(191, 191, 191);
+    box-shadow: 1px 1px 2px rgb(240, 240, 240);
+    z-index: 100;
+    touch-action: manipulation;
+    user-select: none;
+    background-color: rgb(255, 255, 255);
+    white-space: initial;
+}
+
+
+.absol-chrome-calendar-header {
+    white-space: nowrap;
+    position: relative;
+}
+
+
+.absol-chrome-calendar-title {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.absol-chrome-calendar-header-buttons {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.absol-chrome-calendar-header-buttons > button {
+    font-size: 1em;
+    width: 1.5em;
+    height: 1.5em;
+    padding: 0;
+    border-radius: 0.2em;
+    border: solid 1px rgb(167, 167, 167);
+    background: linear-gradient(rgb(240, 240, 240), rgb(233, 233, 233), rgb(223, 223, 223));
+    cursor: pointer;
+    outline: none;
+    box-shadow: 1px 1px 2px #aaa;
+    color: rgb(110, 110, 110);
+}
+
+.absol-chrome-calendar-header-buttons > button:nth-child(2) {
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+}
+
+
+.absol-chrome-calendar-header-buttons > button:active {
+    box-shadow: 0px 0px 2px #aaa;
+
+}
+
+.absol-chrome-calendar:not(.view-era)  .absol-chrome-calendar-title {
+    cursor: pointer;
+}
+
+.absol-chrome-calendar.as-level-day  .absol-chrome-calendar-title::after{
+    content: "\25BC";
+}
+
+
+.absol-chrome-calendar-title > span {
+    line-height: 1.5em;
+}
+
+.absol-chrome-calendar-instance {
+    margin-top: 1em;
+    border: solid 1px rgb(190, 190, 190);
+    width: 14em;
+    position: relative;
+    height: calc(8.4em + 3px);
+    overflow: hidden;
+    /*border*/
+}
+
+.absol-chrome-calendar-dayofweek {
+    background-color: rgb(241, 241, 241);
+    height: 1.2em;
+    white-space: nowrap;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.absol-chrome-calendar-dayofweek > div {
+    text-align: center;
+    line-height: 1.2;
+    display: inline-block;
+    width: 14.2857142857%;
+    border-bottom: solid 1px rgb(191, 191, 191);
+    box-sizing: border-box;
+}
+
+.absol-chrome-calendar-month-animation-container {
+    position: absolute;
+    transition: top 0.2s;
+}
+
+.absol-chrome-calendar-month-animation-container.old {
+    z-index: 7;
+    /* background: red; */
+}
+
+.absol-chrome-calendar-month-animation-container.new {
+    z-index: 8;
+    /* background: blue; */
+}
+
+.absol-chrome-calendar-month-animation-container > .absol-chrome-calendar-month {
+    width: 100%;
+    height: 100%;
+    margin-top: -1px;
+}
+
+
+.absol-chrome-calendar-month {
+    display: table;
+    width: 100%;
+    margin-top: 1.2em;
+    background-color: white;
+    /*for header*/
+}
+
+.absol-chrome-calendar-week-in-mounth {
+    display: table-row;
+    height: 1.2em;
+}
+
+.absol-chrome-calendar-week-in-mounth > div {
+    display: table-cell;
+    text-align: right;
+    padding-right: 0.4em;
+    cursor: pointer;
+}
+
+.absol-chrome-calendar-week-in-mounth > div:hover {
+    background-color: rgb(224, 245, 256);
+}
+
+
+.absol-chrome-calendar-not-in-month {
+    color: rgb(190, 190, 190);
+}
+
+.absol-chrome-calendar-today {
+    border: inset 1px rgb(191, 191, 191);
+    box-sizing: border-box;
+}
+
+.absol-chrome-calendar-selected {
+    background-color: rgb(188, 205, 236);
+}
+
+.absol-chrome-calendar-years {
+    width: 100%;
+    height: 100%;
+}
+
+
+.absol-chrome-calendar:not(.view-year) .absol-chrome-calendar-years {
+    /* display: none; */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10000;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.absol-chrome-calendar.view-year .absol-chrome-calendar-instance {
+    border-color: rgb(77, 114, 254)
+}
+
+.absol-chrome-calendar:not(.view-month) .absol-chrome-calendar-month,
+.absol-chrome-calendar:not(.view-month) .absol-chrome-calendar-dayofweek,
+.absol-chrome-calendar:not(.view-era) .absol-chrome-calendar-era {
+    display: none;
+}
+
+.absol-chrome-calendar:not(.view-month) .absol-chrome-calendar-title {
+    color: rgb(191, 191, 191);
+}
+
+
+.absol-chrome-calendar-year {
+    overflow: hidden;
+}
+
+
+.absol-chrome-calendar-year-head {
+    background-color: rgb(241, 241, 241);
+    border-bottom: solid 1px rgb(191, 191, 191);
+    height: 1.5em;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+
+.absol-chrome-calendar-year:last-child .absol-chrome-calendar-year-head {
+    border-bottom: solid 1px rgb(191, 191, 191);
+}
+
+.absol-chrome-calendar-year.start-opening .absol-chrome-calendar-year-mounths,
+.absol-chrome-calendar-year.closing .absol-chrome-calendar-year-mounths {
+    margin-bottom: -6em;
+    transition: margin-bottom linear 0.1s;
+}
+
+.absol-chrome-calendar-year.opening .absol-chrome-calendar-year-mounths,
+.absol-chrome-calendar-year.start-closing .absol-chrome-calendar-year-mounths {
+    margin-bottom: 0;
+    transition: margin-bottom linear 0.1s;
+
+}
+
+.absol-chrome-calendar-year-mounths {
+    width: 100%;
+    display: table;
+    height: 6em;
+    border-bottom: solid 1px rgb(191, 191, 191);
+}
+
+.absol-chrome-calendar-year-row-months {
+    display: table-row;
+}
+
+.absol-chrome-calendar-year-month {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.absol-chrome-calendar-year-month:hover,
+.absol-chrome-calendar-era-year:hover {
+    background-color: rgb(224, 245, 256);
+}
+
+
+.absol-chrome-calendar-years:hover .absol-scrollbar {
+    opacity: 1;
+
+}
+
+.absol-chrome-calendar-years .absol-scrollbar {
+    background-color: rgba(169, 169, 172, 0.2);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.absol-chrome-calendar-date-disabled,
+.absol-chrome-calendar-era-year.absol-chrome-calendar-date-disabled{
+    color: rgb(240, 230, 230);
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+button.absol-chrome-calendar-button-disabled,
+.absol-chrome-calendar button:disabled {
+    color: rgb(220, 210, 210);
+    pointer-events: none;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+.absol-chrome-calendar-era {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1000000;
+    /*width: 100%;*/
+    /*height: 100%; */
+    width: calc(196px + 17px);
+    box-sizing: border-box;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0px 0px 1px 0 black;
+    overflow-y: scroll;
+    font-size: inherit;
+}
+
+.absol-chrome-calendar-era-row {
+    width: 14em;
+    height: 25%;
+    white-space: nowrap;
+    font-size: inherit;
+}
+
+.absol-chrome-calendar-era-year {
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    width: 25%;
+    text-align: center;
+    line-height: 2.1em;
+    font-size: inherit;
+    color: rgb(190, 190, 190);
+}
+
+
+.absol-chrome-calendar-in-decade:not(.absol-chrome-calendar-date-disabled) {
+    color: black;
+}
+
+/*.absol-chrome-calendar-era*/
+
+/*** module: node_modules/absol-acomp/css/checkbox.css ***/
+/** align middle in table cell **/
+td > .absol-checkbox:first-child:last-child,
+td > .absol-checkbox.as-no-label:first-child:last-child .as-checkbox-input{
+    display: block;
+    margin: auto;
+}
+
+.absol-checkbox {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    line-height: 16px;
+}
+
+.absol-checkbox.right > .absol-checkbox-label.as-right {
+    display: none;
+}
+
+
+.absol-checkbox:not(.right) > .absol-checkbox-label.as-left {
+    display: none;
+}
+
+.absol-checkbox-label {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+
+.absol-checkbox-label.as-left {
+    padding-right: 0.3em;
+}
+
+
+.absol-checkbox-label.as-right {
+    padding-left: 0.3em;
+}
+
+.absol-checkbox.as-no-label {
+    width: calc(1em + 2px);
+    height: calc(1em + 2px);
+}
+
+
+.absol-checkbox.as-no-label .absol-checkbox-label {
+    display: none;
+}
+
+.absol-checkbox.as-no-label .as-checkbox-input {
+    display: block;
+}
+
+.absol-checkbox.as-disabled .absol-checkbox-label {
+    color: #777;
+}
+
+
+/*** module: node_modules/absol-acomp/css/checkboxinput.css ***/
+:root {
+    --candy-border-color: #929292;
+    --candy-hover-background-color: #eeeee9;
+    --candy-disabled-background-color: #ebebe4;
+}
+
+label.as-checkbox-input {
+    display: inline-block;
+    position: relative;
+    width: calc(1em + 2px);
+    height: calc(1em + 2px);
+    cursor: pointer;
+    font-size: inherit;
+    box-sizing: border-box;
+    vertical-align: middle;
+    border-radius: 0.25em;
+    padding: 0;
+    margin: 0; /*fix boostrap override*/
+}
+
+label.as-checkbox-input:hover .bound,
+.absol-checkbox:hover .bound {
+    fill: var(--candy-hover-background-color);
+}
+
+.as-checkbox-input .tick {
+    fill: #606060;
+}
+
+.as-checkbox-input input.as-checkbox-input-value {
+    font-size: inherit;
+    position: absolute;
+    right: 100%;
+    top: 0;
+    opacity: 0.0;
+    z-index: -100000000000;
+}
+
+input.as-checkbox-input-value:not(:checked) ~ svg .tick {
+    opacity: 0;
+}
+
+label.as-checkbox-input .bound {
+    stroke: var(--candy-border-color);
+    fill: white;
+}
+
+label.as-checkbox-input .tick {
+    opacity: 1;
+    transition: opacity 0.1s;
+}
+
+label.as-checkbox-input.as-disabled > svg .bound,
+label.as-checkbox-input.as-disabled:hover > svg .bound {
+    stroke: #929292;
+    fill: #ebebe4;
+}
+
+
+.as-checkbox-input > svg {
+    width: 100%;
+    height: 100%;
+}
+
+/*** module: node_modules/absol-acomp/css/checkboxbutton.css ***/
+.as-checkbox-button{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.as-checkbox-button .absol-checkbox-icon{
+    display: block;
+}
+
+/*** module: node_modules/absol-acomp/css/chrometimepicker.css ***/
+.as-chrome-time-picker {
+    box-sizing: border-box;
+    vertical-align: top;
+    display: inline-block;
+    font-family: Arial;
+    font-size: 14px;
+    padding: 0.6em;
+    border: solid 1px rgb(191, 191, 191);
+    box-shadow: 1px 1px 2px rgb(240, 240, 240);
+    z-index: 100;
+    touch-action: manipulation;
+    user-select: none;
+    background-color: rgb(255, 255, 255);
+    /*width: calc(160px + 1.2em);*/
+    height: 176px;
+    white-space: nowrap;
+}
+
+.as-chrome-time-picker.as-24h-clock .as-chrome-time-picker-scroller-h12,
+.as-chrome-time-picker:not(.as-24h-clock) .as-chrome-time-picker-scroller-h24,
+.as-chrome-time-picker.as-24h-clock .as-chrome-time-picker-period {
+    display: none;
+}
+
+.as-chrome-time-picker-period {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.as-chrome-time-picker > div:not(:first-child) {
+    margin-left: 5px;
+}
+
+
+.as-chrome-time-picker-scroller {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.as-chrome-time-picker-scroller-up,
+.as-chrome-time-picker-scroller-down {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: transparent;
+    border-radius: 3px;
+    border: none;
+    font-size: 1.5em;
+}
+
+.as-chrome-time-picker-scroller-up:hover,
+.as-chrome-time-picker-scroller-down:hover {
+    background-color: rgba(169, 169, 169, 0.2);
+}
+
+.as-chrome-time-picker-scroller-up {
+    top: -5px;
+}
+
+.as-chrome-time-picker-scroller-down {
+    bottom: -5px;
+}
+
+
+.as-chrome-time-picker-viewport {
+    width: 50px;
+    height: 100%;
+    overflow: hidden;
+    white-space: normal;
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+.as-chrome-time-picker-list {
+    height: 100%;
+    overflow-y: scroll;
+    width: calc(100% + 18px);
+}
+
+.as-chrome-time-picker-btn {
+    font-size: inherit;
+    height: 28px;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.as-chrome-time-picker-btn:hover {
+    background-color: rgb(224, 245, 256);
+}
+
+.as-chrome-time-picker-btn.as-selected {
+    background-color: rgb(188, 205, 236);
+    border-radius: 3px;
+}
+
+.as-chrome-time-picker-btn > span {
+    font-size: 16px;
+}
+
+
+
+
+
+/*** module: node_modules/absol-acomp/css/circlesectionlabel.css ***/
+.as-circle-section-label {
+    position: relative;
+    -webkit-print-color-adjust: exact;
+    /*friendly print*/
+}
+
+.as-circle-section-label-text {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1em;
+    padding-right: 2.5em;
+    color: white;
+    font-weight: bold;
+    z-index: 2;
+}
+
+
+.as-circle-section-label-index {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    color: rgb(30, 162, 245);
+    font-weight: 900;
+    z-index: 2;
+}
+
+
+@media print {
+    .as-circle-section-label-text {
+        color: white !important;
+    }
+
+    .as-circle-section-label-index {
+        color: rgb(30, 162, 245) !important;
+    }
+}
+
+
+.as-circle-section-label-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.as-circle-section-label-background>svg {
+    display: block;
+}
+
+.as-circle-section-label-index-box {
+    stroke: rgb(129, 211, 246);
+    fill: white;
+    stroke-width: 2.5;
+}
+
+.as-circle-section-label-arrow {
+    stroke: rgb(30, 162, 245);
+    fill: none;
+    stroke-linecap: round;
+}
+
+.as-circle-section-label-text-box {
+    fill: rgb(30, 162, 245);
+    stroke: none;
+}
+
+.as-circle-section-label-arrow-marker-path {
+    fill: rgb(30, 162, 245);
+    stroke: none;
+}
+
+/*** module: node_modules/absol-acomp/css/contextmenu.css ***/
+.absol-context-menu-hook {
+    position: absolute;
+    z-index: -100000;
+    width: 14px;
+    height: 14px;
+    top: 0;
+    opacity: 0;
+    resize: none;
+    cursor: default;
+}
+
+.absol-context-hinge-fixed-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000000001;
+}
+
+.absol-context-hinge {
+    position: relative;
+    width: 0;
+    height: 0;
+}
+
+.absol-context-hinge > .absol-context-menu {
+    position: absolute;
+    top: -10000px;
+    left: -10000px;
+    visibility: hidden;
+    z-index: 55;
+    display: inline-block;
+}
+
+.absol-context-hinge .absol-vmenu,
+.absol-context-hinge .absol-hmenu {
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    /* background-color: rgb(37, 37, 38);
+    -webkit-box-shadow: 2px 2px 9px 0px rgba(7, 7, 7, 1);
+    -moz-box-shadow: 2px 2px 9px 0px rgb(7, 7, 7, 1);
+    box-shadow: 2px 2px 9px 0px rgba(7, 7, 7, 1); */
+    color: black;
+    background-color: rgb(252, 252, 255);
+    -webkit-box-shadow: 2px 2px 9px 0px rgba(20, 20, 20, 1);
+    -moz-box-shadow: 2px 2px 9px 0px rgba(20, 20, 20, 1);
+    box-shadow: 2px 2px 9px 0px rgba(20, 20, 20, 1);
+}
+
+.absol-context-menu-anchor.dark .absol-hmenu,
+.absol-context-menu-anchor.dark .absol-vmenu,
+.dark .absol-context-menu-anchor .absol-hmenu,
+.dark .absol-context-menu-anchor .absol-vmenu {
+    background-color: rgb(37, 37, 38);
+}
+
+
+.absol-context-menu-anchor {
+    position: fixed;
+    z-index: -1000;
+    left: 0;
+    top: 0;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    font-size: inherit;
+}
+
+.absol-context-menu-anchor > textarea {
+    width: 160px;
+    height: 160px;
+    margin: 0;
+    resize: none;
+    border: none;
+    opacity: 0;
+    cursor: default;
+}
+
+.absol-context-menu-anchor.absol-active {
+    z-index: 100000000;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.absol-context-menu-anchor .absol-vmenu,
+.absol-context-menu-anchor .absol-hmenu {
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    color: black;
+    background-color: rgb(252, 252, 255);
+    -webkit-box-shadow: 2px 2px 9px 0px rgba(20, 20, 20, 1);
+    -moz-box-shadow: 2px 2px 9px 0px rgba(20, 20, 20, 1);
+    box-shadow: 2px 2px 9px 0px rgba(20, 20, 20, 1);
+}
+
+
+.as-system-context-menu {
+    /** nothing here, to define use system context menu**/
+}
+
+.as-context-menu-ctn{
+    font-size: var(--as-context-menu-font-size);
+    font-family: var(--as-input-font-family);
+}
+
+.as-context-menu-ctn.as-anchor-modal {
+    position: fixed;
+    z-index: 8000000;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: rgba(155, 155, 155, 0.3);
+}
+
+.as-context-menu-ctn.as-anchor-modal::before,
+.as-context-menu-ctn.as-anchor-modal > .absol-vmenu {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.as-context-menu-ctn.as-anchor-modal > .absol-vmenu {
+    text-align: left;
+}
+
+
+.as-context-menu-ctn.as-anchor-modal::before {
+    content: "";
+    height: 100%;
+}
+
+.as-context-menu-ctn.as-anchor-modal > .absol-vmenu {
+    min-width: 70%;
+    max-width: calc(100% - 10px);
+    max-height: calc(100% - 10px);
+}
+
+/*** module: node_modules/absol-acomp/css/follower.css ***/
+.absol-follower {
+    position: fixed;
+    z-index: 100;
+}
+
+.absol-follower-hidden{
+    z-index: -1000 !important;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/*** module: node_modules/absol-acomp/css/menu.css ***/
+.absol-ico {
+    width: 1em;
+    height: 1em;
+}
+
+.absol-button {
+    white-space: normal;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.absol-dropdown {
+    position: relative;
+}
+
+.absol-dropdown-content {
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.absol-dropdown.top > .absol-dropdown-content {
+    top: auto;
+    bottom: 100%;
+}
+
+.absol-dropdown.overlap-left > .absol-dropdown-content {
+    left: auto;
+    right: 0;
+}
+
+.absol-dropright {
+    position: relative;
+}
+
+.absol-dropright-content {
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: auto;
+}
+
+.absol-dropright.overlap-top > .absol-dropright-content {
+    top: unset;
+    bottom: 0;
+}
+
+.absol-drop-hidden > .absol-dropdown-content,
+.absol-drop-hidden > .absol-dropright-content {
+    display: none;
+}
+
+
+.absol-hmenu {
+    display: inline-block;
+    background-color: rgb(252, 252, 255);
+    /* background-color: rgb(33, 33, 33); */
+
+}
+
+.absol-hmenu > .absol-dropdown {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.absol-hmenu-button:hover,
+.absol-hmenu .absol-hmenu-button-hover {
+
+    background-color: rgb(175, 175, 175);
+}
+
+.absol-hmenu-button {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.absol-hmenu-button:focus {
+    outline: none;
+}
+
+.absol-hmenu-button,
+.absol-vmenu-button {
+    color: rgb(55, 55, 55);
+    height: 100%;
+    background-color: transparent;
+    font-size: 1em;
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+.absol-hmenu-button {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.absol-vmenu {
+  
+}
+
+.absol-hmenu .absol-dropdown-content,
+.absol-hmenu .absol-dropright-content,
+.as-v-root-menu .absol-dropright-content {
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    background-color: rgb(252, 252, 255);
+    -webkit-box-shadow: 2px 2px 9px 0px rgba(20, 20, 20, 1);
+    -moz-box-shadow: 2px 2px 9px 0px rgba(20, 20, 20, 1);
+    box-shadow: 2px 2px 9px 0px rgba(20, 20, 20, 1);
+}
+
+.absol-vmenu-button {
+    text-align: left;
+    padding-left: 0.5em;
+    padding-right: 2em;
+    height: 1.8em;
+    white-space: nowrap;
+    position: relative;
+}
+
+img.absol-vmenu-button-icon {
+    opacity: 0;
+    display: none;
+}
+
+img.absol-vmenu-button-icon[src] {
+    display: block;
+}
+
+.absol-vmenu-button-ext-icon-container {
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: middle;
+    margin-right: 0.5em;
+}
+
+.absol-vmenu-button-ext-icon-container > span,
+.absol-vmenu-button-ext-icon-container > i {
+    font-size: 1.2em;
+    line-height: 1;
+    display: block;
+}
+
+
+.absol-vmenu-button-ext-icon-container > svg,
+.absol-vmenu-button-ext-icon-container > img {
+    height: 1.2em;
+    width: 1.2em;
+    display: block;
+}
+
+
+.absol-vmenu-button-text,
+.absol-vmenu-button-key {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.absol-vmenu-button-key {
+    font-style: italic;
+    text-align: right;
+    margin-left: 1em;
+}
+
+.absol-vmenu-arrow-container {
+    position: absolute;
+    right: 0.2em;
+    top: 0.3em;
+    bottom: 0.3em;
+}
+
+
+.absol-vmenu-arrow-container::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+
+.absol-vmenu-arrow {
+    display: inline-block;
+    font-size: inherit;
+    vertical-align: middle;
+}
+
+.absol-menu-item-disable .absol-vmenu-arrow {
+    display: none;
+}
+
+.absol-vmenu-button:hover,
+.absol-vmenu .absol-vmenu-button-hover {
+    background-color: rgb(214, 214, 217);
+}
+
+.absol-menu-item-disable .absol-vmenu-button:hover,
+.absol-menu-item-disable .absol-vmenu .absol-vmenu-button-hover,
+.absol-menu-item-disable .absol-hmenu-button:hover,
+.absol-menu-item-disable .absol-hmenu .absol-hmenu-button-hover {
+    background-color: transparent;
+}
+
+.absol-vmenu-line {
+    text-align: center;
+    padding: 0.2em 1em;
+}
+
+.absol-vmenu-line > div {
+    height: 1px;
+    background-color: rgb(97, 97, 97);
+}
+
+.absol-menu-item-disable {
+}
+
+.absol-menu-item-disable button {
+    color: rgb(155, 155, 159);
+}
+
+.dark .absol-menu-item-disable button {
+    color: rgb(100, 100, 100);
+}
+
+.dark .absol-vmenu-button:hover,
+.dark .absol-vmenu .absol-vmenu-button-hover {
+    background-color: rgb(9, 71, 113);
+}
+
+
+.dark .absol-hmenu .absol-dropdown-content,
+.dark .absol-hmenu .absol-dropright-content {
+    background-color: rgb(37, 37, 38);
+}
+
+
+.dark .absol-hmenu-button,
+.dark .absol-vmenu-button {
+    color: rgb(200, 200, 200);
+
+}
+
+
+.dark .absol-hmenu-button:hover,
+.dark .absol-hmenu .absol-hmenu-button-hover {
+    background-color: rgb(80, 80, 80);
+}
+
+
+.dark .absol-hmenu {
+    background-color: rgb(33, 33, 33);
+}
+
+/*standard-alone*/
+.absol-vmenu-button.standard-alone {
+    height: 2em;
+    border-radius: 0.3em;
+    border: solid rgb(169, 169, 170) 1px;
+    outline: none;
+}
+
+.as-v-root-menu {
+    display: inline-block;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/*** module: node_modules/absol-acomp/css/countdownclock.css ***/
+.as-countdown-clock {
+    width: 7em;
+    height: 7em;
+    border-radius: 50%;
+    position: relative;
+    display:inline-block;
+    font-family: Consolas;
+}
+
+.as-countdown-clock-border-wrapper{
+    pointer-events:none;
+    position: absolute;
+    box-sizing: border-box;
+    left: 0.2em;
+    right: 0.2em;
+    top: 0.2em;
+    bottom: 0.2em;
+    filter: drop-shadow(0 0px 1px rgb(100, 200, 255));
+}
+
+.as-countdown-clock-border {
+    width: 100%;
+    height: 100%;
+    border: solid 0.2em rgb(100, 200, 255);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.as-countdown-clock-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%, -50%);
+    font-size: 2em;
+}
+
+.as-countdown-clock div,
+.as-countdown-clock span
+{
+    font-family: inherit;
+}
+
+/*** module: node_modules/absol-acomp/css/dvexptree.css ***/
+.as-dv-exp-tree {
+
+}
+
+.as-dv-exp-tree > .absol-exp-node > .absol-exp-node-level {
+}
+
+.as-dv-exp-tree > .absol-exp-node > .absol-radio-button {
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 5px;
+    /*margin-left: 5px;*/
+}
+
+
+.as-dv-exp-tree:not(.as-has-radio) > .absol-exp-node > .absol-radio-button {
+    /*visibility: hidden;*/
+    display: none;
+}
+
+
+.as-dv-exp-tree > .absol-exp-node > .as-dv-exp-tree-index {
+    box-sizing: border-box;
+    padding: 0 0 0 0.5em;
+    margin-left: 0.5em;
+    outline: none;
+    height: 1.2em;
+    min-width: 3em;
+    box-shadow: 0 0  0 1px #dddddd;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: white;
+}
+
+.as-dv-exp-tree > .absol-exp-node > .as-dv-exp-tree-index:hover{
+    box-shadow: 0 0  0 1px #aaaaaa;
+}
+
+.as-dv-exp-tree:not(.as-has-index-input) > .absol-exp-node > .as-dv-exp-tree-index {
+    display: none;
+}
+
+/*.as-dv-exp-tree>.absol-exp-node:not(.status-open):not(.status-close)>.toggler-ico{*/
+/*    display: none;*/
+/*}*/
+
+/*.as-dv-exp-tree .absol-exp-node-ext-icon{*/
+/*    display: none;*/
+/*}*/
+
+/*** module: node_modules/absol-acomp/css/exptree.css ***/
+.absol-exp-node {
+    height: 2em;
+    text-align: left;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    white-space: nowrap;
+    font-size: inherit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    color: rgb(33, 33, 34);
+}
+
+.absol-exp-node .toggler-ico {
+    width: 0.7em;
+    height: 0.7em;
+    margin-right: 0.35em;
+}
+
+.absol-exp-node .toggler-ico path {
+    fill: rgb(104, 104, 104);
+}
+
+.absol-exp-node.status-removable .toggler-ico,
+.absol-exp-node.status-modified .toggler-ico {
+    display: none;
+}
+
+.absol-exp-node:not(.status-open) .toggle-open {
+    display: none;
+}
+
+.absol-exp-node:not(.status-close) .toggle-close {
+    display: none;
+}
+
+
+
+.absol-exp-node:hover .remove-ico {
+    visibility: visible;
+}
+
+
+
+.absol-exp-node.status-removable .remove-ico,
+.absol-exp-node.status-modified .remove-ico {
+    display: inline-block;
+}
+
+.absol-exp-node.status-removable .remove-ico .modified {
+    visibility: hidden;
+}
+
+.absol-exp-node.status-modified .remove-ico .close {
+    visibility: hidden;
+}
+
+.absol-exp-node.status-modified .remove-ico:hover .close {
+    visibility: visible;
+}
+
+.absol-exp-node.status-modified .remove-ico:hover .modified {
+    visibility: hidden;
+}
+
+
+.absol-exp-node .remove-ico {
+    width: 0.9em;
+    height: 0.9em;
+    display: none;
+    visibility: hidden;
+    margin-left: -0.3em;
+    margin-right: 0.45em;
+}
+
+.absol-exp-node .remove-ico .close,
+.absol-exp-node .remove-ico .modified {
+    fill: rgb(169, 169, 169);
+    stroke: none;
+}
+
+
+.absol-exp-node.has-status {
+    padding-right: 2.5em;
+}
+
+.absol-exp-node>div,
+.absol-exp-node>svg {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.absol-exp-node .editing input {
+    color: khaki;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.absol-exp-node:hover {
+    background-color: rgba(169, 169, 172, 0.1);
+}
+
+.absol-exp-node:focus,
+.absol-exp-node.as-active:focus {
+    background-color: rgba(20, 185, 235, 0.3);
+}
+
+.absol-exp-node.as-active {
+    background-color: rgba(169, 169, 172, 0.2);
+}
+
+
+
+.absol-exp-node-name {
+    /* -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none; */
+    user-select: none;
+    vertical-align: middle;
+    color: black;
+    margin-left: 0.5em;
+}
+
+.absol-exp-node-desc {
+    color: rgb(104, 104, 104);
+    margin-left: 0.5em;
+    font-size: 0.85em;
+}
+
+.absol-exp-node-desc:empty {
+    margin-left: 0;
+}
+
+
+.absol-exp-node-expand-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.2em;
+    height: 0.5em;
+    width: 0.5em;
+}
+
+img.absol-exp-node-ext-icon {
+    display: none;
+}
+
+.absol-exp-node-ext-icon,
+.absol-exp-node-ext-icon>img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+div.absol-exp-node-ext-icon:empty {
+    display: none;
+}
+
+div.absol-exp-node-ext-icon {
+    text-align: center;
+}
+
+.absol-exp-node-ext-icon>.mdi,
+.absol-exp-node-ext-icon>span .absol-exp-node-ext-icon>svg {
+    line-height: 1em;
+    font-size: 1.5em;
+}
+
+img.absol-exp-node-ext-icon[src] {
+    display: inline-block;
+}
+
+
+.absol-exp-tree>.absol-exp-node {
+    width: 100%;
+    display: block;
+}
+
+.absol-exp-tree.hide-children>.absol-exp-items {
+    display: none;
+}
+
+
+.dark .toggler-ico path {
+    fill: rgb(169, 169, 169);
+}
+
+
+.dark .absol-exp-node-name {
+    color: rgb(204, 204, 204);
+}
+
+.dark .absol-exp-node-desc {
+    color: rgb(169, 169, 170);
+}
+
+.dark .absol-exp-node {
+    color: rgb(169, 169, 170);
+}
+
+/*** module: node_modules/absol-acomp/css/dateinput.css ***/
+.as-date-input {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    height: 30px;
+    width: calc(6em + 50px);
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    background-color: white;
+    font: inherit;
+}
+
+.as-date-input-text {
+    outline: none;
+    width: calc(100% - 30px);
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    display: block;
+    padding: 0 0 0 var(--as-input-horizontal-padding);
+    font: inherit;
+
+}
+
+.as-date-input-icon-ctn {
+    border-left: 1px solid #ddd;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    width: 29px;
+    box-sizing: border-box;
+    top: 0;
+    height: 28px;
+    background-color: rgba(169, 169, 169, 0.1);
+    cursor: pointer;
+}
+
+
+.as-date-input-icon-ctn:hover {
+    background-color: rgba(169, 169, 169, 0.25);
+}
+
+.as-date-input-icon-ctn:active {
+    background-color: rgba(169, 169, 169, 0.5);
+}
+
+
+.as-date-input-icon-ctn > span {
+    line-height: 28px;
+    font-size: 16px;
+}
+
+.as-date-input.as-disabled {
+    color: rgb(102, 102, 102);
+    pointer-events: none;
+}
+
+.as-date-input.as-value-null .as-date-input-clear-btn,
+.as-date-input.as-must-not-null .as-date-input-clear-btn {
+    display: none;
+}
+
+.as-date-input-clear-btn {
+    font-size: inherit;
+    position: absolute;
+    right: 30px;
+    height: 30px;
+    top: calc(50% - 15px);
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+    color: #bbb;
+    visibility: hidden;
+}
+
+.as-date-input-clear-btn:hover {
+    color: rgb(132, 132, 132)
+}
+
+.as-date-input-clear-btn:active {
+    color: #525555;
+}
+
+.as-date-input-text:focus + .as-date-input-clear-btn,
+.as-date-input:hover .as-date-input-clear-btn {
+    visibility: visible;
+}
+
+
+/*** module: node_modules/absol-acomp/css/datetimeinput.css ***/
+.as-date-time-input {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    height: 30px;
+    width: calc(12em + 30px);
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    background-color: white;
+    overflow: hidden;
+}
+.as-date-time-input.as-disabled{
+    color: rgb(102, 102, 102);
+    pointer-events: none;
+}
+
+
+.as-date-time-input input {
+    outline: none;
+    width: calc(100% - 30px);
+    height: 100%;
+    border: none;
+    display: block;
+    padding: 0 0 0 var(--as-input-horizontal-padding);
+    -webkit-user-select: auto;
+    user-select: auto;
+    -webkit-user-drag: none;
+    color: inherit;
+}
+
+
+.as-date-time-input-icon-btn {
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    border-left: 1px solid #ddd;
+    position: absolute;
+    right: 0;
+    width: 29px;
+    box-sizing: border-box;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(169, 169, 169, 0.1);
+    cursor: pointer;
+    border-radius: 0;
+    color: inherit;
+}
+
+.as-date-time-input-icon-btn > span {
+    font-size: 16px;
+}
+
+
+.as-date-time-input-icon-btn:hover {
+    background-color: rgba(169, 169, 169, 0.25);
+}
+
+.as-date-time-input-icon-btn:active {
+    background-color: rgba(169, 169, 169, 0.5);
+}
+
+
+.as-date-time-input-icon-btn.as-disabled {
+    color: rgb(102, 102, 102);
+    pointer-events: none;
+}
+
+.as-date-time-input-follower {
+    box-sizing: border-box;
+    background-color: white;
+    border: 1px solid #ddd;
+
+}
+
+.as-date-time-input-follower > div {
+    border-color: white;
+}
+
+.as-date-time-input:hover .as-time-input-clear-btn {
+    visibility: visible;
+}
+
+/*** module: node_modules/absol-acomp/css/draggablestack.css ***/
+.absol-draggable-stack {
+    position: relative;
+}
+
+.absol-draggable-stack .drag-zone {
+    touch-action: none;
+}
+
+.absol-draggable-stack > .as-dragging {
+    opacity: 0.2 !important;
+}
+
+.absol-draggable-stack-child-container.as-dragging {
+    opacity: 0.2 !important;
+}
+
+.absol-draggable-stack-clone-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100000;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    pointer-events: all;
+    opacity: 0.5;
+    background: white;
+}
+
+.absol-draggable-vstack > .absol-draggable-stack-clone-container {
+    left: 0;
+    right: 0;
+
+}
+
+.absol-draggable-stack-clone-container * {
+    pointer-events: none !important;
+}
+
+.absol-draggable-stack-clone-container > * {
+    width: 100% !important;
+    height: 100% !important;
+    box-sizing: border-box;
+}
+
+
+.absol-draggable-stack-clone-container.home-going {
+    transition: top 0.2s;
+}
+
+.absol-draggable-stack-dest-line {
+    position: absolute;
+    z-index: 99;
+    box-sizing: content-box;
+}
+
+.absol-draggable-vstack > .absol-draggable-stack-dest-line {
+    transition: top 0.1s;
+    left: 0;
+    right: 0;
+    border-top: solid 3px rgb(74, 174, 233);
+    border-bottom: solid 3px rgb(74, 174, 233);
+}
+
+
+.absol-draggable-hstack {
+    --dest-x: 0px;
+}
+
+.absol-draggable-hstack.as-has-dragging::after {
+    content: "";
+    position: absolute;
+    transition: left 0.1s;
+    top: 0;
+    bottom: 0;
+    left: calc(var(--dest-x) - 3px);
+    border-left: solid 3px rgb(74, 174, 233);
+    border-right: solid 3px rgb(74, 174, 233);
+}
+
+.absol-draggable-hstack.as-no-change::after {
+    visibility: hidden;
+}
+
+
+.absol-draggable-hstack > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.absol-draggable-vstack {
+    --dest-y: unset;
+}
+
+/**.as-state-drag*/
+.absol-draggable-vstack.as-state-drag::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: calc(var(--dest-y) - 3px);
+    left: 0;
+    right: 0;
+    transition: top 0.1s;
+    border-top: solid 3px rgb(74, 174, 233);
+    border-bottom: solid 3px rgb(74, 174, 233);
+    z-index: 999;
+}
+
+
+.absol-draggable-vstack.as-state-no-change::after {
+    visibility: hidden;
+}
+
+/*** module: node_modules/absol-acomp/css/droppanel.css ***/
+.absol-drop-panel-head {
+    height: 2.75em;
+    line-height: 2.75em;
+    -webkit-box-shadow: 0px 3px 4px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 3px 4px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 3px 4px -3px rgba(0, 0, 0, 0.75);
+    background-color: rgba(240, 240, 242);
+    color: black;
+}
+
+.absol-drop-panel-head .toggler-ico path {
+    fill: rgb(104, 104, 104);
+}
+
+
+.dark .absol-drop-panel-head {
+    background-color: rgba(54, 54, 56);
+    color: rgb(204, 204, 204);
+}
+
+.absol-drop-panel.show .absol-drop-panel-body {
+    height:auto;
+}
+
+.absol-drop-panel-body {
+    transition: height 0.2s;
+    height: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+.absol-drop-panel.show>.absol-drop-panel-head  .toggle-close{
+    display: none;
+}
+
+.absol-drop-panel:not(.show)>.absol-drop-panel-head  .toggle-open{
+    display: none;
+}
+
+
+
+/*** module: node_modules/absol-acomp/css/dropzone.css ***/
+.as-drop-zone {
+}
+
+/*** module: node_modules/absol-acomp/css/editabletext.css ***/
+
+.absol-editabe-text {
+    display: inline;
+}
+
+.absol-editabe-text span {
+    font-style: inherit;
+    font-size: inherit;
+    white-space: pre;
+}
+
+.absol-editabe-text-higne {
+    display: inline-block;
+    position: relative;
+    width: 0px;
+    height: 0ox;
+}
+
+.absol-editabe-text-higne input {
+    position: absolute;
+    display: none;
+    border: none;
+    top: -2;
+    left: -2;
+    padding-top: 0px;
+    padding-left: 2px;
+    padding-bottom: 4px;
+    margin: 0;
+    background: transparent;
+    outline: none;
+    font-style: inherit;
+    font-size: inherit;
+}
+
+.absol-editabe-text.editing .absol-editabe-text-higne input {
+    display: block;
+}
+
+.absol-editabe-text.editing span {
+    visibility: hidden;
+}
+
+.absol-editabe-text.editing {
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(33, 77, 255, 1);
+    -moz-box-shadow: 0px 0px 2px 0px rgba(33, 77, 255, 1);
+    box-shadow: 0px 0px 2px 0px rgba(33, 77, 255, 1);
+    border-radius: 0.17em;
+}
+
+
+/*** module: node_modules/absol-acomp/css/emojicounter.css ***/
+.as-emoji-counter {
+    display: inline-block;
+    vertical-align: middle;
+    color: rgb(38, 141, 145);
+    box-sizing: border-box;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    height: 30px;
+    text-align: center;
+    min-height: 30px;
+    padding: 0 8px;
+    border-radius: 15px;
+    font-size: 14px;
+    background-color: white;
+    outline: none;
+}
+
+.as-emoji-counter::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.as-emoji-counter-sprite {
+    display: inline-block;
+    vertical-align: middle;
+    width: 18px;
+    height: 18px;
+}
+
+.as-emoji-counter-num {
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    margin-left: 0.2em;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: inherit;
+    color: inherit;
+    cursor: default;
+}
+
+.as-emoji-counter-num:empty {
+    display: none;
+}
+
+.as-emoji-counter.as-zero {
+    background-color: rgba(220, 220, 220);
+}
+
+.as-emoji-counter + .as-emoji-counter {
+    margin-left: 0.3em;
+}
+
+/*** module: node_modules/absol-acomp/css/emojipicker.css ***/
+.as-emoji-picker {
+    font-size: 12px;
+    border: 1px solid #dddddd;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.as-emoji-picker-preview {
+    display: inline-block;
+    vertical-align: top;
+    width: 80px;
+    height: 110px;
+    border-right: 1px solid #dddddd;
+    text-align: center;
+
+}
+
+
+.as-emoji-picker-preview-anim {
+    width: 60px;
+    height: 60px;
+    margin-top: 5px;
+}
+
+.as-emoji-picker-preview-desc {
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+}
+
+.as-emoji-picker-preview-shortcut {
+    font-size: 12px;
+    color: rgb(70, 70, 70);
+}
+
+
+.as-emoji-picker-list {
+    display: inline-block;
+    vertical-align: top;
+    overflow-y: auto;
+    width: calc(100% - 81px);
+    height: 110px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+
+.as-emoji-picker-item {
+    display: inline-block;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+.as-emoji-picker-item:hover {
+    background-color: rgba(169, 169, 170, 0.3);
+}
+
+.as-emoji-picker-item:active {
+    background-color: rgba(169, 169, 170, 0.7);
+}
+
+/*** module: node_modules/absol-acomp/css/tooltip.css ***/
+:root {
+    --tool-tip-arrow-pos: 50%;
+    --tool-tip-background-color: gray;
+    --tool-tip-text-color: white;
+}
+
+.absol-tooltip {
+    margin: 0;
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    color: var(--tool-tip-text-color);
+}
+
+.absol-tooltip-content {
+    display: block;
+    border-radius: 0.25em;
+    background-color: var(--tool-tip-background-color);
+    padding: 0.25em 0.5em;
+    font-size: inherit;
+}
+
+
+.absol-tooltip-arrow {
+    width: 0;
+    height: 0;
+    position: absolute;
+    box-sizing: content-box;
+    font-size: inherit;
+}
+
+.absol-tooltip.top .absol-tooltip-arrow {
+    border-left: 0.4em solid transparent;
+    border-right: 0.3em solid transparent;
+
+    border-top: 0.3em solid var(--tool-tip-background-color);
+    bottom: 0;
+    left: calc(var(--tool-tip-arrow-pos) - 0.3em);
+}
+
+
+.absol-tooltip.top {
+    padding-bottom: 0.3em;
+}
+
+
+.absol-tooltip.bottom .absol-tooltip-arrow {
+    border-left: 0.3em solid transparent;
+    border-right: 0.4em solid transparent;
+    border-bottom: 0.3em solid var(--tool-tip-background-color);
+
+    top: 0;
+    left: calc(var(--tool-tip-arrow-pos) - 0.3em);
+}
+
+.absol-tooltip.bottom {
+    padding-top: 0.3em;
+}
+
+
+.absol-tooltip.left .absol-tooltip-arrow {
+    border-top: 0.3em solid transparent;
+    border-bottom: 0.4em solid transparent;
+    border-left: 0.4em solid var(--tool-tip-background-color);
+
+    right: 0;
+    top: calc(var(--tool-tip-arrow-pos) - 0.3em);
+}
+
+.absol-tooltip.left {
+    padding-right: 0.4em;
+}
+
+
+.absol-tooltip.right .absol-tooltip-arrow {
+    border-top: 0.4em solid transparent;
+    border-bottom: 0.4em solid transparent;
+    border-right: 0.4em solid var(--tool-tip-background-color);
+
+    left: 0;
+    top: calc(var(--tool-tip-arrow-pos) - 0.3em);
+}
+
+.absol-tooltip.ne .absol-tooltip-arrow {
+    border-top: 0.3em solid transparent;
+    border-bottom: 0.4em solid transparent;
+    border-left: 0.4em solid var(--tool-tip-background-color);
+    bottom: -0.3em;
+    left: 0;
+}
+
+.absol-tooltip.nw .absol-tooltip-arrow {
+    border-top: 0.3em solid transparent;
+    border-bottom: 0.4em solid transparent;
+    border-right: 0.4em solid var(--tool-tip-background-color);
+    bottom: -0.3em;
+    right: 0;
+}
+
+.absol-tooltip.se .absol-tooltip-arrow {
+    border-top: 0.3em solid transparent;
+    border-bottom: 0.4em solid transparent;
+    border-left: 0.4em solid var(--tool-tip-background-color);
+    top: -0.3em;
+    left: 0;
+}
+
+.absol-tooltip.sw .absol-tooltip-arrow {
+    border-top: 0.3em solid transparent;
+    border-bottom: 0.4em solid transparent;
+    border-right: 0.4em solid var(--tool-tip-background-color);
+    top: -0.25em;
+    right: 0;
+}
+
+.absol-tooltip.right {
+    padding-left: 0.4em;
+}
+
+
+.absol-tooltip-root {
+    position: relative;
+    width: 0;
+    height: 0;
+}
+
+.absol-tooltip-root-holder {
+    position: fixed;
+    z-index: 100000000;
+    left: 0;
+    top: 0;
+}
+
+/*** module: node_modules/absol-acomp/css/pageindicator.css ***/
+.as-page-indicator {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.as-page-indicator::before{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.as-page-indicator-item {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    font-size: inherit;
+    width: 1.5em;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+
+
+.as-page-indicator-item::before {
+    content: "";
+    display: inline-block;
+    height: 0.5em;
+    width: 0.5em;
+    transition: width 0.25s, height 0.25s, color 0.25s;
+    border-radius: 50%;
+    background-color: rgb(196, 196, 196);
+    font-size: inherit;
+    vertical-align: middle;
+}
+
+.as-page-indicator-item.as-active::before{
+    width: 0.75em;
+    height: 0.75em;
+    background-color: var(--variant-color-primary);
+
+}
+
+/*** module: node_modules/absol-acomp/css/emojipickertooltip.css ***/
+.as-emoji-picker-tooltip {
+    --tool-tip-background-color: white;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.as-emoji-picker-tooltip .absol-tooltip-content {
+    display: block;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.as-emoji-picker-tooltip-left-btn,
+.as-emoji-picker-tooltip-right-btn {
+    display: inline-block;
+    vertical-align: middle;
+    height: 60px;
+    width: 40px;
+    font-size: 25px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    color: rgb(155, 155, 175);
+    outline: none;
+}
+
+.as-emoji-picker-tooltip-left-btn:hover,
+.as-emoji-picker-tooltip-right-btn:hover {
+    background-color: rgba(156, 156, 156, 0.15);
+}
+
+.as-emoji-picker-tooltip-left-btn:active,
+.as-emoji-picker-tooltip-right-btn:active {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.as-emoji-picker-tooltip-left-btn:disabled,
+.as-emoji-picker-tooltip-right-btn:disabled {
+    pointer-events: none;
+    color: rgb(230, 230, 235);
+}
+
+.as-emoji-picker-tooltip-scroller {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 360px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.as-emoji-picker-tooltip-icon-list {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    white-space: nowrap;
+}
+
+
+.as-emoji-picker-tooltip:not(.as-scrolling) .as-emoji-picker-tooltip-icon-list {
+    transition: left 0.5s;
+}
+
+.as-emoji-picker-tooltip-icon-btn {
+    display: inline-block;
+    vertical-align: middle;
+    height: 60px;
+    width: 60px;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+
+.as-emoji-picker-tooltip-icon {
+    transition: width 0.3s, height 0.3s;
+    width: 35px;
+    height: 35px;
+}
+
+.as-emoji-picker-tooltip-icon-btn:hover .as-emoji-picker-tooltip-icon {
+    width: 45px;
+    height: 45px;
+}
+
+.as-emoji-picker-tooltip-remove-btn {
+    display: inline-block;
+    vertical-align: middle;
+    height: 60px;
+    width: 60px;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 40px;
+    color: rgb(185, 185, 185);
+}
+
+.as-emoji-picker-tooltip-remove-btn:hover {
+    color: rgb(255, 30, 30);
+}
+
+
+.as-emoji-picker-tooltip:not(.as-mobile) .as-emoji-picker-tooltip-page-indicator {
+    display: none;
+}
+
+.as-emoji-picker-tooltip.as-mobile .as-emoji-picker-tooltip-right-btn,
+.as-emoji-picker-tooltip.as-mobile .as-emoji-picker-tooltip-left-btn {
+    display: none;
+}
+
+
+@media (max-width: 410px) and (min-width: 310px) {
+    .as-emoji-picker-tooltip-left-btn,
+    .as-emoji-picker-tooltip-right-btn {
+        height: 36px;
+        width: 24px;
+        font-size: 15px;
+    }
+
+    .as-emoji-picker-tooltip-scroller {
+        width: 216px;
+        height: 36px;
+    }
+
+    .as-emoji-picker-tooltip-icon-btn {
+        height: 36px;
+        width: 36px;
+    }
+
+
+    .as-emoji-picker-tooltip-icon {
+        width: 21px;
+        height: 21px;
+    }
+
+    .as-emoji-picker-tooltip-icon-btn:hover .as-emoji-picker-tooltip-icon {
+        width: 27px;
+        height: 27px;
+    }
+
+    .as-emoji-picker-tooltip-remove-btn {
+        height: 36px;
+        width: 36px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 510px) and (min-width: 410px) {
+    .as-emoji-picker-tooltip-left-btn,
+    .as-emoji-picker-tooltip-right-btn {
+        height: 48px;
+        width: 32px;
+        font-size: 20px;
+    }
+
+
+    .as-emoji-picker-tooltip-scroller {
+        width: 288px;
+        height: 48px;
+    }
+
+
+    .as-emoji-picker-tooltip-icon-btn {
+        height: 48px;
+        width: 48px;
+    }
+
+
+    .as-emoji-picker-tooltip-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .as-emoji-picker-tooltip-icon-btn:hover .as-emoji-picker-tooltip-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .as-emoji-picker-tooltip-remove-btn {
+        height: 48px;
+        width: 48px;
+        font-size: 32px;
+    }
+}
+
+/*** module: node_modules/absol-acomp/css/emojiuserlisttooltip.css ***/
+.as-emoji-user-list-tooltip {
+    --tool-tip-background-color: white;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+    text-align: left;
+}
+
+
+.as-emoji-user-list-tooltip-emoji {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: -30px;
+    left: calc(50% - 30px);
+    z-index: 2;
+
+}
+
+.as-emoji-user-list-tooltip .absol-tooltip-content {
+    min-height: 60px;
+    min-width: 120px;
+    padding-top: 25px;
+}
+
+.as-emoji-user-list-tooltip-user{
+    padding: 3px  10px 3px 0 ;
+}
+
+.as-emoji-user-list-tooltip-user.as-clickable{
+    cursor: pointer;
+}
+
+.as-emoji-user-list-tooltip-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.as-emoji-user-list-tooltip-name {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    color: rgb(70, 70, 72);
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+/*** module: node_modules/absol-acomp/css/flexiconbutton.css ***/
+.as-flexicon-button {
+    box-sizing: border-box;
+    border: solid 1px #bfbfbf;
+    background-color: #ebebeb;
+    border-radius: 0.2em;
+    outline: none;
+    padding: 0;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.as-flexicon-button:disabled {
+    pointer-events: none;
+    background-color: #c7c7c7 !important;
+}
+
+
+.as-flexicon-button div,
+.as-flexicon-button span {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+
+.as-icon-button-table-box {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.as-flexicon-button:hover .as-flexicon-button-content {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.as-flexicon-button:active {
+    -webkit-box-shadow: inset 0 0.2em 0.25em rgba(0, 0, 0, 0.125);
+    box-shadow: inset 0 0.2em 0.25em rgba(0, 0, 0, 0.125);
+}
+
+
+.as-flexicon-button-content {
+    display: table-row;
+}
+
+
+.as-flexicon-button-icon-container,
+.as-flexicon-button-text-container {
+    display: table-cell;
+    box-sizing: content-box;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.as-flexicon-button-icon-container:empty,
+.as-flexicon-button-text-container:empty {
+    display: none;
+}
+
+.as-flexicon-button-icon-container {
+    width: 2em;
+    background-color: rgba(0, 0, 0, 0.0893617021);
+    color: rgb(146, 146, 146);
+}
+
+
+.as-flexicon-button-icon-container > span,
+.as-flexicon-button-icon-container > i,
+.as-flexicon-button-icon-container > svg,
+.as-flexicon-button-icon-container > img {
+    font-size: 1em;
+}
+
+.as-flexicon-button-text-container {
+    padding-left: 0.357em;
+    padding-right: 0.357em;
+    box-sizing: border-box;
+    min-width: 2em;
+}
+
+
+.as-flexicon-button-icon-container + .as-flexicon-button-text-container {
+    border-left: solid 1px #bfbfbf;
+}
+
+.as-flexicon-button-icon-container:empty + .as-flexicon-button-text-container {
+    border-left: none;
+    padding-left: 0.714em;
+    padding-right: 0.714em;
+}
+
+/*** theme  ***/
+
+.as-flexicon-button.primary {
+    border-color: #005bbd;
+    background-color: #007bff;
+    color: white;
+}
+
+.as-flexicon-button.primary .as-flexicon-button-icon-container {
+    color: white;
+}
+
+.as-flexicon-button.primary .as-flexicon-button-text-container {
+    border-color: #005bbd;
+}
+
+
+.as-flexicon-button.secondary {
+    border-color: #4e555a;
+    background-color: #6d767e;
+    color: white;
+}
+
+.as-flexicon-button.secondary .as-flexicon-button-icon-container {
+    color: white;
+}
+
+.as-flexicon-button.secondary .as-flexicon-button-text-container {
+    border-left-color: #4e555a;
+}
+
+
+.as-flexicon-button.success {
+    border-color: #1e7b34;
+    background-color: #29a847;
+    color: white;
+}
+
+.as-flexicon-button.success .as-flexicon-button-icon-container {
+    color: white;
+}
+
+.as-flexicon-button.success .as-flexicon-button-text-container {
+    border-left-color: #1e7b34;
+}
+
+
+.as-flexicon-button.danger {
+    border-color: #b21f2e;
+    background-color: #dc3848;
+    color: white;
+}
+
+.as-flexicon-button.danger .as-flexicon-button-icon-container {
+    color: white;
+}
+
+.as-flexicon-button.danger .as-flexicon-button-text-container {
+    border-left-color: #b21f2e;
+}
+
+.as-flexicon-button.warning {
+    border-color: #9e7700;
+    background-color: #e0a800;
+    color: black;
+}
+
+.as-flexicon-button.warning .as-flexicon-button-icon-container {
+    color: white;
+}
+
+.as-flexicon-button.warning .as-flexicon-button-text-container {
+    border-left-color: #9e7700;
+}
+
+.as-flexicon-button.info {
+    border-color: #117888;
+    background-color: #17a2b8;
+    color: white;
+}
+
+.as-flexicon-button.info .as-flexicon-button-icon-container {
+    color: white;
+}
+
+.as-flexicon-button.info .as-flexicon-button-text-container {
+    border-left-color: #117888;
+}
+
+.as-flexicon-button.light {
+    border-color: #c9d1d9;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+.as-flexicon-button.light .as-flexicon-button-icon-container {
+    color: white;
+}
+
+.as-flexicon-button.light .as-flexicon-button-text-container {
+    border-left-color: #c9d1d9;
+}
+
+.as-flexicon-button.dark {
+    border-color: #171a1c;
+    background-color: #343a40;
+    color: white;
+}
+
+.as-flexicon-button.dark .as-flexicon-button-icon-container {
+    color: white;
+}
+
+.as-flexicon-button.dark .as-flexicon-button-text-container {
+    border-left-color: #171a1c;
+}
+
+.as-flexicon-button.link {
+    border-color: transparent;
+    background-color: transparent;
+    color: #007bff;
+}
+
+.as-flexicon-button.link .as-flexicon-button-icon-container {
+    color: #007bff;
+    background: transparent;
+}
+
+.as-flexicon-button.link .as-flexicon-button-text-container {
+    border-left-color: transparent;
+}
+
+.as-flexicon-button.link:hover .as-flexicon-button-text-container {
+    text-decoration: underline;
+}
+
+/*** module: node_modules/absol-acomp/css/flexiconinput.css ***/
+.as-flexicon-input-icon-ctn > span,
+.as-flexicon-input-icon-ctn > i,
+.as-flexicon-input-icon-ctn > svg,
+.as-flexicon-input-icon-ctn > img {
+    font-size: 1em;
+    line-height: 1;
+}
+
+.as-flexicon-input {
+    position: relative;
+    border: 1px solid #dddddd;
+    display: inline-block;
+    vertical-align: middle;
+    height: 2em;
+    font-size: 14px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.as-flexicon-input::before {
+    content: "";
+    width: 0;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.as-flexicon-input-icon-ctn:empty {
+    display: none;
+}
+
+
+.as-flexicon-input:not(.as-flexicon-input-has-icon) input{
+    padding-left: 0.3em;
+}
+
+.as-flexicon-input-icon-ctn {
+    display: inline-block;
+    vertical-align: middle;
+    /*text-align: center;*/
+    font-size: 1.2em;
+    width: 1.25em;
+    text-align: center;
+}
+
+.as-flexicon-input-unit-ctn {
+    width: 1.5em;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.as-flexicon-input-unit-ctn:empty {
+    display: none;
+}
+
+
+.as-flexicon-input input {
+    border: none;
+    font-size: 1em;
+    outline: none;
+    height: 100%;
+    background-color: transparent;
+    box-sizing: border-box;
+    width: 100%;
+    font-family: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.as-flexicon-input.as-flexicon-input-has-icon input,
+.as-flexicon-input.as-flexicon-input-has-unit input {
+    width: calc(100% - 1.5em);
+}
+
+.as-flexicon-input.as-flexicon-input-has-unit input{
+    text-align: right;
+}
+
+
+.as-flexicon-input.as-flexicon-input-has-icon.as-flexicon-input-has-unit input {
+    width: calc(100% - 3em);
+}
+
+/*** module: node_modules/absol-acomp/css/frame.css ***/
+.absol-frame{
+    
+}
+
+/*** module: node_modules/absol-acomp/css/frameview.css ***/
+.absol-frame-view {
+    position: relative;
+}
+
+
+.absol-frame-view-frame-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+
+.absol-frame-view-frame-container:not(.absol-active) {
+    z-index: -100;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.absol-frame-view-frame-container:not(.absol-active) *,
+.absol-frame-view-frame-container:not(.absol-active) {
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+
+.absol-frame-view-frame-container > div {
+    width: 100%;
+    height: 100%;
+}
+
+/*** module: node_modules/absol-acomp/css/hruler.css ***/
+/*margin for border size*/
+.as-hruler {
+    position: relative;
+    height: 1.5em;
+    border: solid 1px black;
+    overflow: hidden;
+    font-family: courier, "courier new", monospace;
+    box-sizing: border-box;
+}
+
+
+.as-hruler-line {
+    position: absolute;
+    bottom: 0;
+    height: 25%;
+    border-left: solid 1px rgb(17, 48, 43);
+    box-sizing: border-box;
+}
+
+.as-hruler-line.major {
+    height: 50%;
+    border-left: solid 1px rgb(5, 20, 18);
+}
+
+.as-hruler-major-number{
+    position: absolute;
+    text-align: center;
+    width: 5em;
+    pointer-events: none;
+    font-size: 0.7em;
+    bottom: 50%;
+} 
+
+/*** module: node_modules/absol-acomp/css/hexasectionlabel.css ***/
+.as-hexa-section-label {
+    position: relative;
+    -webkit-print-color-adjust: exact;
+    /*friendly print*/
+}
+
+.as-hexa-section-label-text {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1em;
+    padding-right: 2.5em;
+    color: white;
+    font-weight: bold;
+    z-index: 2;
+}
+
+@media print {
+    .as-hexa-section-label-text {
+        color: white !important;
+    }
+
+    .as-hexa-section-label-index {
+        color: rgb(237, 147, 54) !important;
+    }
+}
+
+
+.as-hexa-section-label-index {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    color: rgb(237, 147, 54);
+    font-weight: 900;
+    z-index: 2;
+}
+
+.as-hexa-section-label-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.as-hexa-section-label-background>svg {
+    display: block;
+}
+
+.as-hexa-section-label-index-box {
+    stroke: rgb(251, 186, 130);
+    fill: white;
+    stroke-width: 2.5;
+}
+
+.as-hexa-section-label-text-box {
+    fill: rgb(237, 147, 54);
+    stroke: none;
+}
+
+/*** module: node_modules/absol-acomp/css/linearcolorbar.css ***/
+.as-linear-color-bar {
+    position: relative;
+    height: 2em;
+}
+
+.as-linear-color-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+}
+
+.as-linear-color-value-text {
+    position: absolute;
+    top: 0;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+.as-linear-color-min-value-text,
+.as-linear-color-max-value-text {
+    position: absolute;
+    bottom: 0;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+
+
+.as-linear-color-min-value-text {
+    left: 0;
+}
+
+.as-linear-color-rect {
+    stroke: none;
+}
+
+
+.as-linear-color-value-arrow {
+    fill: rgb(244, 124, 32);
+    stroke: rgb(244, 124, 32);
+}
+
+.as-linear-color-split-line {
+    stroke: white;
+}
+
+/*** module: node_modules/absol-acomp/css/mediainput.css ***/
+.vmedia-no-show {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1;
+    height: 1;
+    z-index: -100000;
+    opacity: 0;
+}
+
+.vmedia-no-select,
+.vmedia-no-select * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+coccocgrammar {
+    display: none;
+}
+
+.vmedia-media-input {
+    box-sizing: border-box;
+    border: solid 1px rgba(0, 0, 0, 0.1)
+}
+
+
+.vmedia-media-input-text-container {
+    position: relative;
+    min-height: 2.5em;
+}
+
+.vmedia-media-input-text-container-editor:focus {
+    outline: none;
+}
+
+.vmedia-media-input-text-container-editor img {
+    display: none;
+}
+
+.vmedia-media-input-text-container-editor * {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    text-decoration: inherit;
+    color: inherit;
+    background: none;
+    padding: 0;
+    margin: 0;
+    white-space: pre;
+}
+
+.vmedia-media-input-text-container-editor {
+    min-height: 2em;
+    padding-left: 0.5em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    margin-right: 0.5em;
+    box-sizing: border-box;
+    max-height: 6.66666666em;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.vmedia-media-input-imagepreview-container {
+    white-space: normal;
+}
+
+.vmedia-media-input:not(.dragover) .vmedia-media-input-dropover {
+    display: none;
+}
+
+.vmedia-media-input-dropover {
+    display: inline-block;
+    width: 7em;
+    height: 7em;
+}
+
+.vmedia-media-input-dropover>svg {
+    width: 7em;
+    height: 7em;
+}
+
+.vmedia-media-input-imagepreview-container .vmedia-media-input-filepreview,
+.vmedia-media-input-imagepreview-container .vmedia-media-input-imagepreview {
+    margin: 0.3em;
+    vertical-align: middle;
+}
+
+.vmedia-media-input-filepreview,
+.vmedia-media-input-imagepreview {
+    position: relative;
+    display: inline-block;
+}
+
+.vmedia-media-input-imagepreview img {
+    height: 2.5em;
+    width: auto;
+}
+
+.vmedia-media-input-filepreview svg.attachment {
+    height: 2em;
+    width: 2em;
+}
+
+.vmedia-media-input-filepreview svg.times,
+.vmedia-media-input-imagepreview svg.times {
+    position: absolute;
+    top: 0.1em;
+    right: 0.1em;
+    width: 1em;
+    height: 1em;
+    fill: rgba(69, 69, 69, 0.6);
+}
+
+.vmedia-media-input-filepreview svg.times:hover,
+.vmedia-media-input-imagepreview svg.times:hover {
+    fill: rgba(144, 144, 144, 0.6);
+}
+
+.vmedia-media-input-filepreview svg.times:active,
+.vmedia-media-input-imagepreview svg.times:active {
+    fill: rgba(220, 220, 240, 0.6);
+}
+
+.vmedia-media-input-plug-button-container {
+    position: absolute;
+    left: 0.25em;
+    bottom: 0.25em;
+    top: 0.25em;
+}
+
+.vmedia-media-input-plug-button-container svg {
+    height: 1.5em;
+    width: 1.5em;
+    vertical-align: middle;
+    transition: transform .22s cubic-bezier(.5, 0, .4, 1);
+}
+
+
+.vmedia-media-input-plug-button-container svg path {
+    fill: rgba(66, 133, 244, 0.7);
+    transition: fill .22s cubic-bezier(.5, 0, .4, 1);
+}
+
+.vmedia-media-input.show-plugin .vmedia-media-input-plug-button svg path {
+    fill: rgba(134, 142, 153, 0.75);
+}
+
+
+
+.vmedia-media-input-plug-button {
+    padding: 0;
+    height: 100%;
+    width: 2em;
+    border: none;
+    background: transparent;
+    outline: none;
+
+}
+
+
+.vmedia-media-input-plugin-content-container {
+    position: absolute;
+    bottom: calc(1px + 100%);
+    opacity: 1;
+    transition: opacity .22s cubic-bezier(.5, 0, .4, 1);
+    background-color: white;
+    box-sizing: border-box;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    z-index: 20;
+    background: white;
+}
+
+.vmedia-media-input-plugin-content-container:empty{
+    display: none;
+}
+
+
+
+.vmedia-media-input-tool-container {
+    position: relative;
+    display: block;
+    height: 1.5em;
+    /* background: red;     */
+}
+
+
+
+.vmedia-media-input-tool-container-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.vmedia-media-input-tool-container-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.vmedia-media-input-tool-container button {
+    width: 2.5em;
+    height: 100%;
+    font-size: 1em;
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+    border: none;
+    background-color: transparent;
+    border-radius: 0.4em;
+}
+
+.vmedia-media-input-text-container-editor {
+    scrollbar-width: thin;
+}
+
+.vmedia-media-input-text-container-editor::-webkit-scrollbar {
+    width: 7px;
+}
+
+
+
+.vmedia-media-input-text-container-editor::-webkit-scrollbar-track {
+    background: rgb(240, 240, 240);
+}
+
+.vmedia-media-input-text-container-editor::-webkit-scrollbar-thumb {
+    background: rgb(205, 205, 205);
+}
+
+.vmedia-media-input-tool-container button svg {
+    height: 1.25em;
+    width: 1.25em;
+}
+
+.vmedia-media-input-tool-container button:hover {
+    background-color: rgba(91, 192, 222, 0.1);
+}
+
+.vmedia-media-input-tool-container button:active {
+    background-color: rgba(91, 192, 222, 0.4);
+}
+
+.vmedia-media-input-tool-container button svg.send {
+    fill: rgba(66, 133, 244, 0.7);
+}
+
+.vmedia-media-input-tool-container button svg.add-file,
+.vmedia-media-input-tool-container button svg.add-image {
+    fill: rgba(66, 66, 66, 0.5);
+}
+
+.vmedia-media-input-tool-container button .mdi{
+    font-size:1.2em; 
+}
+
+.vmedia-media-input-tool-container button:focus {
+    outline: none;
+}
+
+.vmedia-media-input-tool-container button{
+    vertical-align: middle;
+}
+
+.vmedia-media-input-plugin-content-container.blur{
+    visibility: hidden;
+}
+
+/*** module: node_modules/absol-acomp/css/messageinput.css ***/
+.as-conversation-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.as-conversation-box-message-ctn {
+    flex-grow: 1;
+}
+
+.as-conversation-box-input-ctn {
+    /** empty**/
+}
+
+.as-message-input {
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    overflow: visible;
+    --plugin-buttons-width: 0px;
+    font-size: var(--as-input-font-size);
+    font-family: var(--as-input-font-family);
+}
+
+.as-message-input * {
+    font: inherit;
+}
+
+
+.as-message-input-plugin-btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    color: rgb(122, 122, 122);
+    background-color: rgb(241, 241, 241);
+    outline: none;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.as-message-input-plugin-btn:active {
+    background-color: rgb(212, 212, 212);
+}
+
+.as-message-input-plugin-btn:hover {
+    background-color: rgb(235, 235, 235);
+
+}
+
+
+.as-message-input-plugin-btn span {
+    font-size: 24px;
+}
+
+
+.as-message-input-right {
+    position: absolute;
+    bottom: 10px;
+    right: 5px;
+    z-index: 0;
+    white-space: nowrap;
+}
+
+.as-message-input-right .as-message-input-plugin-btn {
+    margin-left: 10px;
+}
+
+
+.as-message-input-emoji-btn-ctn {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+}
+
+
+.as-message-input-pre-ctn {
+    position: relative;
+    width: calc(100% - 55px - var(--plugin-buttons-width));
+    border-radius: 25px;
+    box-sizing: border-box;
+    transition: width 0.1s;
+    padding: 10px 20px 10px 50px;
+    background-color: rgb(241, 241, 244);
+}
+
+
+.as-message-input-pre-ctn::after {
+    display: inline-block;
+    content: "";
+    height: 30px;
+    vertical-align: middle;
+}
+
+
+.as-message-input.as-has-text .as-message-input-pre-ctn,
+.as-message-input.as-has-quote .as-message-input-pre-ctn,
+.as-message-input.as-has-attachment .as-message-input-pre-ctn {
+    width: calc(100% - 55px);
+}
+
+
+.as-message-input-pre {
+    display: inline-block;
+    width: calc(100% - 2px);
+    max-height: 6.5em;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    vertical-align: middle;
+    margin: 0;
+    white-space: pre-wrap;
+    overflow-x: hidden;
+    overflow-y: auto;
+    line-height: 1.5;
+    border: none;
+}
+
+.as-message-input-pre:before {
+    content: "";
+    line-height: 30px;
+    display: inline;
+    vertical-align: middle;
+}
+
+.as-message-input-camera-caller,
+.as-message-input-camera-microphone {
+    display: none;
+}
+
+.as-message-input-emoji-picker-ctn {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    background-color: white;
+}
+
+
+.as-message-input-plugin-btn.as-message-input-plugin-send {
+    color: white;
+    background: linear-gradient(135deg, rgb(0, 120, 212), rgb(0, 188, 242));
+    transform: scale(1);
+    transition: scale 0.1s;
+}
+
+.as-message-input-plugin-btn.as-message-input-plugin-send span {
+    font-size: 20px;
+}
+
+.as-message-input-plugin-btn.as-message-input-plugin-send:hover {
+    background: linear-gradient(135deg, rgb(0, 140, 212), rgb(0, 208, 252));
+}
+
+.as-message-input-plugin-btn.as-message-input-plugin-send:active {
+    transform: scale(0.9);
+}
+
+
+.as-message-input:not(.as-text-changed):not(.as-has-attachment):not(.as-has-quote) .as-message-input-plugin-send,
+.as-message-input:not(.as-has-text):not(.as-has-attachment):not(.as-has-quote) .as-message-input-plugin-send,
+.as-message-input:not(.as-mode-edit) .as-message-input-plugin-cancel,
+.as-message-input.as-mode-edit.as-text-changed.as-has-text .as-message-input-plugin-cancel,
+.as-message-input:not(.as-has-attachment):not(.as-drag-hover) .as-message-input-attachment-ctn,
+.as-message-input.as-auto-send .as-message-input-attachment-ctn,
+.as-message-input.as-mode-edit .as-message-input-plugin-file,
+.as-message-input.as-has-text .as-message-input-plugin-file,
+.as-message-input.as-has-quote .as-message-input-plugin-file,
+.as-message-input:not(.as-has-quote) .as-message-quote-box {
+    display: none;
+}
+
+.as-message-input .as-message-quote-box {
+    border-bottom: 1px solid #ddd;
+}
+
+.as-message-quote-box {
+    position: relative;
+
+}
+
+.as-message-input.as-has-attachment .as-message-quote-box {
+    margin-bottom: 5px;
+}
+
+.as-message-quote-remove-btn {
+    position: absolute;
+    color: rgb(43, 44, 51);
+    right: -7px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    font-size: 16px;
+    outline: none;
+}
+
+.as-message-quote-remove-btn:hover {
+    color: rgb(143, 144, 151);
+}
+
+.as-message-quote-box {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.as-message-quote-box:not(.as-removable) .as-message-quote-remove-btn {
+    display: none;
+}
+
+
+.as-message-quote-box > div {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.as-message-quote-box:not(.as-has-img):not(.as-has-file) .as-message-quote-img {
+    display: none;
+}
+
+.as-message-quote-img {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    box-sizing: border-box;
+    background-size: cover;
+    background-origin: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.as-message-quote-sym {
+    width: 25px;
+}
+
+.as-message-quote-sym > span {
+    font-size: 25px;
+    color: rgb(169, 169, 172);
+}
+
+.as-message-quote-content {
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    width: calc(100% - 26px);
+    box-sizing: border-box;
+    padding-left: 20px;
+}
+
+.as-message-quote-box.as-has-img .as-message-quote-content,
+.as-message-quote-box.as-has-file .as-message-quote-content {
+    width: calc(100% - 66px);
+    padding-left: 5px;
+}
+
+.as-message-quote-box.as-has-file .as-message-quote-img {
+    background-origin: padding-box;
+    background-size: contain;
+}
+
+.as-message-quote-text {
+    font-size: 1.14em;
+    line-height: 1.75;
+    font-style: italic;
+    color: rgb(43, 44, 51);
+    max-width: 100%;
+    word-break: break-word;
+    white-space: pre-wrap;
+}
+
+.as-message-quote-box.as-shorten-text .as-message-quote-text {
+    word-break: normal;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.as-message-quote-text .as-emoji {
+    width: 20px;
+    height: 20px;
+}
+
+.as-message-quote-desc {
+    font-size: 0.85em;
+    color: rgb(80, 80, 88);
+}
+
+.as-message-input-attachment-ctn {
+    border-bottom: 1px solid #ddd;
+    max-height: 170px;
+    overflow-y: auto;
+}
+
+
+.as-message-input-attach-preview {
+    display: inline-block;
+    position: relative;
+    width: 135px;
+    height: 135px;
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.as-message-input-attach-preview-image {
+    min-width: 20px;
+    image-orientation: from-image;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+.as-message-input-attach-preview-file {
+    max-width: 50%;
+    max-height: 50%;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.as-message-input-attach-preview-close-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    text-align: center;
+    border: 1px solid white;
+    outline: none;
+    padding: 0;
+    color: white;
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.64);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.64);
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.64);
+    background-color: rgba(100, 100, 100, 0.5);
+}
+
+.as-message-input-attach-preview-close-btn span {
+    font-size: 14px;
+}
+
+.as-message-input-attach-preview-close-btn:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(200, 200, 200);
+}
+
+.as-message-input-attach-preview-close-btn:active {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: rgb(255, 255, 255);
+}
+
+
+.as-message-input:not(.as-drag-hover) .as-message-input-attachment-add-btn-drop,
+.as-message-input.as-drag-hover .as-message-input-attachment-add-btn-plus {
+    display: none;
+}
+
+
+.as-message-input-attach-preview-info {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    max-height: calc(100% - 20px);
+    text-shadow: 0px 1px 3px white;
+    color: black;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.as-message-input-attach-preview-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.as-message-input-attach-preview-size {
+    color: #42494c;
+}
+
+.as-message-input-attachment-add-btn {
+    display: inline-block;
+    vertical-align: middle;
+    height: 135px;
+    width: 60px;
+    border: none;
+    border-radius: 10px;
+    padding: 0;
+    background-color: rgb(196, 196, 200);
+    color: white;
+    font-size: 50px;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.as-message-input-attachment-add-btn:hover {
+    background-color: rgb(169, 169, 169)
+
+}
+
+.as-message-input-attachment-add-btn:active {
+    background-color: rgb(138, 141, 145)
+}
+
+.as-message-input-external-tools-popup {
+    position: absolute;
+    left: 0;
+    max-width: 100%;
+    bottom: 100%;
+    background-color: white;
+}
+
+img.as-emoji {
+    vertical-align: bottom;
+}
+
+span.as-emoji-text {
+    position: absolute;
+    color: transparent;
+    width: 20px;
+    opacity: 0;
+}
+
+/*** module: node_modules/absol-acomp/css/modal.css ***/
+.as-modal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    white-space: nowrap;
+}
+
+.as-modal.as-hidden{
+    z-index: -1000;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.as-modal.as-center {
+    text-align: center;
+}
+
+
+.as-modal.as-middle::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: 0;
+}
+
+.as-modal > .as-modal-content {
+    display: inline-block;
+    text-align: initial;
+    white-space: initial;
+}
+
+/*for content*/
+.as-modal.as-middle > .as-modal-content {
+    vertical-align: middle;
+}
+
+
+/*** module: node_modules/absol-acomp/css/multiselectmenu.css ***/
+:root {
+    --multi-select-menu-max-height: none;
+}
+
+.as-multi-select-menu {
+    --list-min-width: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    min-height: var(--select-box-min-height);
+    min-width: var(--list-min-width);
+    border: solid 1px #d6d6d6;
+    border-radius: 3px;
+    box-sizing: border-box;
+    outline: none;
+    background-color: white;
+    padding-right: 45px;
+}
+
+.as-multi-select-menu-item-ctn {
+    display: block;
+    max-height: var(--multi-select-menu-max-height);
+    overflow-y: auto;
+}
+
+
+.as-multi-select-menu-toggle-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 30px;
+    pointer-events: none;
+    border: none;
+    background-color: transparent;
+}
+
+.as-multi-select-menu-toggle-btn svg.dropdown {
+    width: 10px;
+    height: 10px;
+    fill: #929292;
+}
+
+.as-multi-select-menu:hover svg.dropdown {
+    fill: black;
+}
+
+.as-multi-select-menu.as-disable-click-to-focus .as-multi-select-menu-toggle-btn{
+    display: none;
+}
+
+.as-multi-select-menu .absol-selectbox-item {
+    margin: calc((var(--select-box-min-height) - 2px - var(--select-box-item-height)) / 2) 2px;
+}
+
+
+.as-multi-select-menu.as-item-focusable .absol-selectbox-item.as-active{
+    background-color: var(--select-box-focus-item-color);
+}
+
+.as-multi-select-menu.as-disabled {
+    pointer-events: none;
+    background-color: #ebebe4;
+}
+
+/*** module: node_modules/absol-acomp/css/selectmenu.css ***/
+.absol-selectmenu-anchor-container {
+    /* position: fixed; */
+
+    /* top: 0; */
+    /* left: 0; */
+    width: 0;
+    height: 0;
+    overflow: visible;
+}
+
+.absol-selectmenu-anchor {
+    position: relative;
+}
+
+.absol-selectmenu-anchor-content-container {
+    position: absolute;
+    z-index: 1002;
+    top: 0;
+    left: 0;
+}
+
+.absol-selectmenu-anchor-content-container .absol-bscroller {
+    max-height: calc(100vh - 50px);
+}
+
+
+.absol-selectmenu-anchor.absol-disabled .absol-selectmenu-anchor-content-container {
+    visibility: hidden;
+    top: -100000px;
+    left: -10000px;
+    z-index: -1000;
+    opacity: 0;
+}
+
+
+.absol-selectmenu-dropdown-box {
+    border: solid 1px rgb(100, 100, 255);
+    box-sizing: border-box;
+    background-color: white;
+    display: inline-block;
+    vertical-align: top;
+    -webkit-box-shadow: 2px 2px 6px 0px rgba(0, 0, 90, 0.55);
+    -moz-box-shadow: 2px 2px 6px 0px rgba(0, 0, 90, 0.55);
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 90, 0.55);
+}
+
+.absol-selectmenu-dropdown-box > .as-bscroller {
+    overflow-y: auto;
+}
+
+.absol-selectmenu-dropdown-box .absol-search-text-input {
+    margin: 0.2em;
+}
+
+
+.absol-selectmenu.absol-hidden {
+    display: none !important;
+}
+
+.absol-selectmenu-render-space {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1000;
+    visibility: hidden;
+    font-size: 14px;
+}
+
+.absol-selectmenu-render-space > div {
+    display: inline-block;
+}
+
+
+.absol-selectmenu.as-disabled,
+.as-select-menu.as-disabled
+{
+    pointer-events: none;
+    background-color: #ebebe4;
+
+}
+
+.absol-selectmenu {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    height: 30px;
+    min-width: 30px;
+    border: solid 1px #d6d6d6;
+    border-radius: 2px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 14px;
+    outline: none;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+
+/* .absol-selectmenu:hover {
+    border: solid 1px black;
+} */
+
+.absol-selectmenu-btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 30px;
+    border: none;
+    background: transparent;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.absol-selectmenu-btn:focus {
+    outline: none;
+}
+
+.absol-selectmenu-btn svg.dropdown {
+    width: 10px;
+    height: 10px;
+    fill: #929292;
+}
+
+.absol-selectmenu:hover svg.dropdown {
+    width: 10px;
+    height: 10px;
+    fill: black;
+}
+
+.absol-selectmenu-holder-item {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    /*1px for border*/
+    white-space: nowrap;
+}
+
+.absol-selectmenu-holder-item::before{
+    content: "";
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.absol-selectmenu-holder-item>.absol-selectlist-item{
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.absol-selectmenu .absol-selectlist-item span {
+    padding-right: 28px;
+}
+
+.absol-selectmenu .absol-scroll-button {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+}
+
+.absol-selectmenu .absol-scroll-button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.absol-scroll-bar-v-container {
+    width: 10px;
+}
+
+.absol-selectmenu .absol-search-text-input {
+    margin: 4px;
+}
+
+.absol-selectmenu-render-space .absol-selectlist-item span {
+    padding-right: 0;
+}
+
+
+.absol-selectmenu .absol-selectlist-item-desc-container {
+    right: 30px;
+}
+
+
+.absol-selectmenu-dropdown-box .absol-bscroller {
+    overflow-y: auto;
+}
+
+
+.as-select-anchor {
+    position: fixed;
+    z-index: 1000001;
+}
+
+
+.as-select-anchor.as-hidden {
+    left: 0;
+    top: 0;
+    z-index: -1000;
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+.as-select-menu {
+    --select-list-estimate-width: 0;
+    --select-list-desc-width: 0;
+    width: calc(var( --select-list-estimate-width) + 32px);
+    min-width: calc(var( --select-list-estimate-width) + 32px);
+}
+
+/*** module: node_modules/absol-acomp/css/selectlistbox.css ***/
+.as-select-list-box {
+    --select-list-estimate-width: 0;
+    --max-height: calc(100vh - 80px);
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: calc(var(--select-list-estimate-width) + 2px + 5px);
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: solid 1px rgb(100, 100, 255);
+    box-sizing: border-box;
+    background-color: white;
+    display: inline-block;
+    vertical-align: top;
+    -webkit-box-shadow: 2px 2px 6px 0px rgba(0, 0, 90, 0.55);
+    -moz-box-shadow: 2px 2px 6px 0px rgba(0, 0, 90, 0.55);
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 90, 0.55);
+    outline: none;
+}
+
+.absol-follower.as-select-list-box{
+    z-index: 1000000;
+}
+
+.as-select-list-box .as-select-list-box {
+    min-width: 100%;
+}
+
+.as-select-list-box-search-ctn {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.as-select-list-box.as-enable-search.as-anchor-6 .as-select-list-box-search-ctn,
+.as-select-list-box.as-enable-search.as-anchor-5 .as-select-list-box-search-ctn {
+    bottom: 0;
+}
+
+.as-select-list-box.as-enable-search.as-anchor-6,
+.as-select-list-box.as-enable-search.as-anchor-5 {
+    padding-bottom: 38px;
+}
+
+.as-select-list-box.as-enable-search.as-anchor-1,
+.as-select-list-box.as-enable-search.as-anchor-2 {
+    padding-top: 38px;
+}
+
+.as-select-list-box.as-enable-search.as-anchor-1 .as-select-list-box-search-ctn,
+.as-select-list-box.as-enable-search.as-anchor-2 .as-select-list-box-search-ctn {
+    top: 0;
+}
+
+.as-select-list-box-scroller {
+    overflow-y: auto;
+    overflow-x: visible;
+}
+
+.as-select-list-box .as-select-list-box-scroller {
+    max-height: var(--max-height);
+}
+
+.as-select-list-box.as-enable-search .as-select-list-box-scroller {
+    max-height: calc(var(--max-height) - 38px);
+}
+
+.as-select-list-box-content {
+    position: relative;
+}
+
+.as-select-list-box-page {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.as-select-list-box .absol-selectlist-item{
+    cursor: default;
+}
+
+.as-select-list-box-search-ctn {
+    display: none;
+    padding: 5px;
+}
+
+
+.as-select-list-box.as-enable-search .as-select-list-box-search-ctn {
+    display: block;
+}
+
+.as-select-list-box:not(.as-searching) .as-last-in-group {
+    border-bottom: 1px solid #dddddd;
+}
+
+.as-select-list-box .as-last-in-group span {
+    line-height: 19px;
+}
+
+
+.as-select-list-box .absol-selectlist-item:hover {
+    background-color: #efefef;
+}
+
+.as-select-list-box.as-value-hidden .absol-selectlist-item.as-selected{
+    color: #aaaaaa;
+}
+
+.as-select-list-box.as-value-hidden .absol-selectlist-item.as-selected.as-is-leaft{
+    display: none;
+}
+
+/*** module: node_modules/absol-acomp/css/selectlist.css ***/
+.absol-selectlist {
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.absol-selectlist * {
+    box-sizing: border-box;
+}
+
+.absol-selectlist .absol-selectlist-item:hover {
+    background-color: #efefef;
+}
+
+.absol-selectlist .absol-selectlist-item {
+    height: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.absol-selectlist-item.as-selected {
+    background-color: #dfdfdf;
+}
+
+
+.absol-selectlist:not(.as-searching)>.absol-selectlist-item.as-last-in-group:not(:last-child) {
+    border-bottom: 1px solid #dddddd;
+}
+
+.absol-selectlist-item>span {
+    line-height: 20px;
+    white-space: pre;
+    padding-left: var(--as-input-horizontal-padding);
+    padding-right: var(--as-input-horizontal-padding);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.absol-selectlist-item {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.absol-selectlist-item-desc-container {
+    position: absolute;
+    right: 0.3em;
+    top: 0;
+    bottom: 0;
+}
+
+.absol-selectlist-item-desc {
+    font-style: italic;
+    line-height: 20px;
+    white-space: nowrap;
+    color: rgb(37, 37, 37);
+}
+
+.absol-selectlist-item-desc:empty {
+    display: none;
+}
+
+
+
+
+/*** module: node_modules/absol-acomp/css/selectbox.css ***/
+:root {
+    --select-box-item-height: 20px;
+    --select-box-item-font-size: 14px;
+    --select-box-item-border-radius: 9px;
+    --select-box-item-close-opacity: 0;
+    --select-box-min-height: 30px;
+    --select-box-focus-item-color: rgb(208, 145, 239);
+}
+
+.absol-selectbox {
+    --list-min-width: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    min-height: var(--select-box-min-height);
+    min-width: var(--list-min-width);
+    border: solid 1px #d6d6d6;
+    border-radius: 3px;
+    box-sizing: border-box;
+    padding-right: 20px;
+    overflow-y: auto;
+    outline: none;
+    background-color: white;
+}
+
+.absol-selectbox:not(.as-disable-click-to-focus) {
+    cursor: copy;
+}
+
+.absol-selectbox.as-disabled {
+    pointer-events: none;
+    background-color: #ebebe4;
+}
+
+.absol-selectbox.as-disabled .absol-selectbox-item {
+    opacity: 0.7;
+}
+
+.absol-selectbox {
+    white-space: normal;
+}
+
+.absol-selectbox .absol-selectbox-item {
+    margin: calc((var(--select-box-min-height) - 2px - var(--select-box-item-height)) / 2) 2px;
+}
+
+.absol-selectbox-item {
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    position: relative;
+    font-size: var(--select-box-item-font-size);
+    height: var(--select-box-item-height);
+    box-sizing: border-box;
+    border-radius: var(--select-box-item-border-radius);
+    overflow: hidden;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+    vertical-align: top;
+    white-space: normal;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: black;
+    cursor: pointer;
+}
+
+
+.absol-selectbox-item.as-theme-confirmed {
+    background-color: rgb(145, 228, 251);
+}
+
+.absol-selectbox-item.as-theme-declined {
+    background-color: rgb(255, 138, 138)
+}
+
+.absol-selectbox-item.as-theme-waiting {
+    background-color: rgb(255, 227, 174);
+    color: black;
+}
+
+.absol-selectbox-item-text {
+    height: var(--select-box-item-height);
+    padding-right: calc(var(--select-box-item-height) + 5px);
+    padding-left: 5px;
+    font-size: inherit;
+    white-space: nowrap;
+}
+
+.absol-selectbox-item-text:hover {
+    background-color: rgba(0, 0, 0, 0.0893617021);
+}
+
+.absol-selectbox-item-text span {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.absol-selectbox-item-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: var(--select-box-item-height);
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, var(--select-box-item-close-opacity));
+    white-space: nowrap;
+}
+
+.absol-selectbox-item-close::after,
+.absol-selectbox-item-text::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.absol-selectbox-item-close span {
+    font-size: 1.25em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.absol-selectbox.as-item-focusable .absol-selectbox-item.as-active {
+    background-color: var(--select-box-focus-item-color);
+}
+
+/*** module: node_modules/absol-acomp/css/numberinput.css ***/
+.absol-number-input {
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    min-width: calc(1em + 2px);
+    height: calc(2em + 2px);
+    border: solid 1px #d6d6d6;
+    font-size: 14px;
+    box-sizing: border-box;
+    width: 4em;
+}
+
+.absol-number-input-button-up-container {
+    top: 0;
+}
+
+.absol-number-input-button-down-container {
+    bottom: 0;
+}
+
+.absol-number-input-button-up-container,
+.absol-number-input-button-down-container {
+    right: 0;
+    position: absolute;
+    height: 1em;
+    width: 1em;
+    max-height: 50%;
+}
+
+.absol-number-input-button-up-container>button,
+.absol-number-input-button-down-container>button {
+    width: 100%;
+    height: 100%;
+    line-height: 1;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    outline: none;
+    color: rgb(101, 101, 101);
+    background-color: transparent;
+    background-color: rgb(101, 101, 101, 0.05);
+}
+
+.absol-number-input-button-up-container>button:active,
+.absol-number-input-button-down-container>button:active{
+    color: black;
+    background-color: rgb(101, 101, 101, 0.3);
+}
+
+.absol-number-input-text-container {
+    left: 0em;
+    right: 1.2em;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+
+.absol-number-input-text-container>input[type="text"] {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    text-align: right;
+    padding-left:0.2em;
+    padding-right: 0.2em;  
+    box-sizing: border-box;
+}
+
+.absol-number-input.absol-disabled{
+    pointer-events: none;
+}
+
+.absol-number-input.absol-disabled{
+    pointer-events: none;
+}
+
+.absol-number-input.absol-disabled .absol-number-input-button-up-container,
+.absol-number-input.absol-disabled .absol-number-input-button-down-container
+{
+    opacity: 0.3;
+}
+
+/*** module: node_modules/absol-acomp/css/onscreenwidget.css ***/
+.as-onscreen-widget {
+    --client-width: 0px;
+    --client-height: 0px;
+    --cx: 0.9;
+    --cy: 0.9;
+    position: fixed;
+    z-index: 1000000;
+    left: calc((100vw - var(--client-width) - 4px) * var(--cx) + 2px);
+    top: calc((100vh - var(--client-height) - 4px) * var(--cy) + 2px);
+    touch-action: none;
+    user-select: none;
+}
+
+
+
+/*** module: node_modules/absol-acomp/css/onscreenwindow.css ***/
+.absol-onscreen-window {
+    z-index: 1002;
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    width: 12em;
+    height: 5em;
+    /*default size*/
+    /* min-width: 12em;
+    min-height: 1.4em; */
+}
+
+.absol-onscreen-window-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: white;
+    -webkit-box-shadow: 2px 2px 17px -1px rgba(0, 0, 0, 0.54);
+    -moz-box-shadow: 2px 2px 17px -1px rgba(0, 0, 0, 0.54);
+    box-shadow: 2px 2px 17px -1px rgba(0, 0, 0, 0.54);
+}
+
+.absol-onscreen-window-head-bar {
+    height: 1.4em;
+    position: relative;
+    background-color: rgba(169, 169, 169, 0.15);
+    padding: 0.2em;
+    box-sizing: border-box;
+}
+
+.absol-onscreen-window-head-bar-icon{
+    margin-right: 0.2em;
+    font-size: inherit;
+}
+
+span.absol-onscreen-window-head-bar-icon {
+    line-height: 1.2em;
+}
+
+svg.absol-onscreen-window-head-bar-icon{
+    width: 1.2em;
+    height: 1.2em;
+}
+
+span.absol-onscreen-window-head-bar-title {
+    line-height: 1.2em;
+    font-size: 1em;
+    color: rgb(33, 33, 34);
+}
+
+.absol-onscreen-window-head-bar-buttons {
+    position: absolute;
+    right: 0.1em;
+    top: 0.1em;
+    bottom: 0.1em;
+}
+
+.absol-onscreen-window-head-bar-buttons>button {
+    height: 100%;
+    width: 1em;
+    font-size: 1em;
+    padding: 0;
+    margin: 0 0 0 0.1em;
+    border: none;
+    color: rgb(169, 169, 169);
+    outline: none;
+}
+
+.absol-onscreen-window-head-bar-buttons>button:hover {
+    color: rgb(103, 103, 103);
+}
+
+.absol-onscreen-window-head-bar-buttons>button:active {
+    color: rgb(33, 33, 34);
+}
+
+.absol-onscreen-window-head-bar-buttons>button:hover>.mdi-close {
+    color: rgb(255, 59, 59);
+}
+
+.absol-onscreen-window-head-bar-buttons>button>span {
+    vertical-align: middle;
+}
+
+.absol-onscreen-window-body-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.4em;
+    bottom: 0;
+}
+
+
+.absol-onscreen-window-moving-modal {
+    position: fixed;
+    left: 1px;
+    right: 1px;
+    top: 1px;
+    bottom: 1px;
+    z-index: 100006;
+}
+
+.absol-onscreen-window-resizer {
+    position: absolute;
+}
+
+.absol-onscreen-window-resizer.absol-onscreen-window-resize-bottom {
+    bottom: -3px;
+    height: 6px;
+    left: 3px;
+    right: 3px;
+    z-index: 3;
+}
+
+.absol-onscreen-window-resizer.absol-onscreen-window-resize-top {
+    top: -3px;
+    height: 6px;
+    left: 3px;
+    right: 3px;
+    z-index: 3;
+}
+
+.absol-onscreen-window-resizer.absol-onscreen-window-resize-left {
+    left: -3px;
+    top: 3px;
+    bottom: 3px;
+    width: 6px;
+    cursor: ew-resize;
+}
+
+.absol-onscreen-window-resizer.absol-onscreen-window-resize-right {
+    right: -3px;
+    top: 3px;
+    bottom: 3px;
+    width: 6px;
+    cursor: ew-resize;
+}
+
+.absol-onscreen-window-resizer.absol-onscreen-window-resize-bottom-right {
+    width: 6px;
+    height: 6px;
+    right: -3px;
+    bottom: -3px;
+}
+
+.absol-onscreen-window-resizer.absol-onscreen-window-resize-bottom-left {
+    width: 6px;
+    height: 6px;
+    left: -3px;
+    bottom: -3px;
+}
+
+.absol-onscreen-window-resizer.absol-onscreen-window-resize-top-left {
+    width: 6px;
+    height: 6px;
+    left: -3px;
+    top: -3px;
+}
+
+.absol-onscreen-window-resizer.absol-onscreen-window-resize-top-right {
+    width: 6px;
+    height: 6px;
+    right: -3px;
+    top: -3px;
+}
+
+
+.absol-onscreen-window-resize-top,
+.absol-onscreen-window-resize-bottom {
+    cursor: ns-resize;
+
+}
+
+.absol-onscreen-window-resize-left,
+.absol-onscreen-window-resize-right {
+    cursor: ew-resize;
+
+}
+
+
+.absol-onscreen-window-resize-bottom-right {
+    cursor: se-resize;
+}
+
+.absol-onscreen-window-resize-bottom-left {
+    cursor: sw-resize;
+}
+
+.absol-onscreen-window-resize-top-left {
+    cursor: nw-resize;
+}
+
+.absol-onscreen-window-resize-top-right {
+    cursor: ne-resize;
+}
+
+/*** module: node_modules/absol-acomp/css/pageselector.css ***/
+.absol-page-selector{
+    white-space: normal;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.absol-page-selector > ul{
+    margin-bottom: 0px;
+    margin-top: 0;
+}
+
+.absol-page-number-buttons{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.absol-page-number-input > label{
+    font-weight: 100;
+}
+
+.absol-page-number-buttons > li.page-previous, 
+.absol-page-number-buttons > li.page-next,
+.absol-page-number-buttons > li.page-first,
+.absol-page-number-buttons > li.page-last
+{
+    display: inline-block;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    transition: all .3s linear;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.absol-page-number-buttons > li.absol-page-number{
+    display: inline-block;
+    height: 30px;
+    width: 40px;
+    text-align: center;
+    transition: all .3s linear;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+.absol-page-number-buttons > li.absol-page-number.active{
+    box-shadow:  0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    background-color: #4285f4;
+    border-radius:2px; 
+    
+}
+
+.absol-page-number-buttons > li.absol-page-number.active > a{
+	color: white;
+    
+}
+
+.absol-page-number-buttons > li> a{
+    line-height: 30px;
+    text-decoration:none;
+    outline: none;
+}
+
+.absol-page-number-buttons > li:not(.active):hover{
+    background-color: #eee;
+
+}
+
+.absol-page-selector .absol-page-number-input{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.absol-page-selector .absol-page-number-input  input[type="text"]{
+    width: 3em;
+    margin-left: 5px; 
+    margin-right: 10px;
+    text-align: center;
+    height: 26px;
+    border: none;
+    border: solid 1px #ccc; 
+    border-radius: 2px;
+
+}
+
+.absol-page-link {
+    color: #147af6;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.absol-page-number {
+    color: #147af6;
+    cursor: pointer;
+}
+
+/*** module: node_modules/absol-acomp/css/preinput.css ***/
+.as-preinput {
+    margin: 0;
+    padding: 0;
+    white-space: pre-wrap;
+    -moz-user-modify: read-write;
+    -webkit-user-modify: read-write;
+    word-break: normal;
+}
+pre.as-preinput{
+    word-break: normal;
+}
+
+
+.as-preinput img {
+    display: none;
+}
+
+/*** module: node_modules/absol-acomp/css/progressbar.css ***/
+.as-progress-bar {
+    height: 1em;
+    background-color: #e9ecef;
+    border-radius: .25em;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+.as-progress-bar-value {
+    height: 100%;
+    width: 0;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #007bff;
+    transition: width .6s ease;
+}
+
+.as-progress-bar.as-variant-success .as-progress-bar-value {
+    background-color: #28a745;
+}
+
+.as-progress-bar.as-variant-info .as-progress-bar-value {
+    background-color: #17a2b8;
+}
+
+.as-progress-bar.as-variant-warning .as-progress-bar-value {
+    background-color: #ffc107;
+}
+
+.as-progress-bar.as-variant-danger .as-progress-bar-value {
+    background-color: #dc3545;
+}
+
+
+.as-progress-bar.as-striped .as-progress-bar-value,
+.as-progress-bar.as-animated .as-progress-bar-value {
+    background-image: linear-gradient(45deg, hsla(0, 0%, 100%, .15) 25%, transparent 0, transparent 50%, hsla(0, 0%, 100%, .15) 0, hsla(0, 0%, 100%, .15) 75%, transparent 0, transparent);
+    background-size: 1.33333em 1.33333em;
+}
+
+@keyframes as-progress-bar-stripes {
+    0% {
+        background-position: 1.33333em 0
+    }
+
+    to {
+        background-position: 0 0
+    }
+}
+
+.as-progress-bar.as-animated .as-progress-bar-value {
+    animation: as-progress-bar-stripes 1s linear infinite;
+}
+
+/*** module: node_modules/absol-acomp/css/quicklistbutton.css ***/
+.as-quick-list-button {
+    box-sizing: border-box;
+    height: calc(2em + 2px);
+    font-size: 14px;
+}
+
+.as-quick-list-button .as-flexicon-button-text-container {
+    border-right: solid 1px #bfbfbf;
+}
+
+
+.as-quick-list-button-follower .absol-selectlist {
+    max-height: calc(100vh - 20px);
+    overflow-y: auto;
+    border: solid 1px rgb(100, 100, 255);
+    box-sizing: border-box;
+    background-color: white;
+    display: inline-block;
+    vertical-align: top;
+    -webkit-box-shadow: 2px 2px 6px 0px rgba(0, 0, 90, 0.55);
+    -moz-box-shadow: 2px 2px 6px 0px rgba(0, 0, 90, 0.55);
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 90, 0.55);
+}
+
+/*** module: node_modules/absol-acomp/css/quickpath.css ***/
+.absol-quick-path {
+    position: relative;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    min-height: 1.5em;
+}
+
+.absol-quick-path button {
+    outline: none;
+    color: rgb(69, 69, 69);
+    height: 1.5em;
+}
+
+.absol-quick-path button:hover {
+    color: black;
+}
+
+.absol-quick-path .toggler-ico path {
+    fill: rgb(104, 104, 104);
+}
+
+.dark .absol-quick-path button {
+    color: rgb(200, 200, 200);
+}
+
+
+.dark .absol-quick-path button:hover {
+    color: white;
+}
+
+.dark .absol-quick-path .toggler-ico path {
+    fill: rgb(169, 169, 169);
+}
+
+
+
+.absol-quick-path-btn:focus span {
+    text-decoration: underline;
+}
+
+/* 
+.absol-quick-path-btn .toggler-ico path {
+    fill: rgb(104, 104, 104);
+} */
+
+
+/*** module: node_modules/absol-acomp/css/radio.css ***/
+.absol-radio {
+    display: inline;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.absol-radio input {
+    display: none;
+}
+
+.absol-radio > span {
+    white-space: pre;
+    cursor: inherit;
+    vertical-align: middle;
+    margin: 0;
+    font-size: inherit;
+}
+
+.absol-radio > span:empty {
+    display: none;
+}
+
+.absol-radio > svg {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(1em + 4px);
+    height: calc(1em + 4px);
+}
+
+.absol-radio > svg .bound {
+    stroke: #929292;
+    fill: white;
+}
+
+.absol-radio:hover > svg .bound {
+    fill: #d6d6d6;
+    stroke: black;
+}
+
+/* 
+.absol-radio>svg .bound {
+    fill: none;
+} */
+
+.absol-radio-icon .border {
+}
+
+.absol-radio .dot {
+    transition: opacity 0.07s;
+    opacity: 0;
+    fill: #606060;
+}
+
+.absol-radio:hover .dot {
+    transition: opacity 0.07s;
+    opacity: 0;
+    fill: black;
+}
+
+.absol-radio.checked .dot {
+    opacity: 1;
+    transition: opacity 0.1s;
+}
+
+.absol-radio:not(.right) > span.absol-radio-left-label {
+    display: none;
+}
+
+.absol-radio.right > span.absol-radio-right-label {
+    display: none;
+}
+
+span.absol-radio-left-label {
+    padding-right: 0.3em;
+}
+
+span.absol-radio-right-label {
+    padding-left: 0.3em;
+}
+
+
+
+
+.absol-radio.disabled {
+    cursor: default;
+}
+
+.absol-radio.disabled{
+    color: #777;
+}
+
+.absol-radio.disabled:hover .dot,
+.absol-radio.disabled .dot {
+    fill: #929292;
+}
+
+.absol-radio.disabled .bound,
+.absol-radio.disabled:hover .bound {
+    stroke: #929292;
+    fill: #ebebe4;
+}
+
+
+.absol-radio .standar-alone {
+    display: inline-block;
+}
+
+input:checked ~ .absol-radio-icon .dot {
+    opacity: 1;
+}
+
+/*** module: node_modules/absol-acomp/css/radiobutton.css ***/
+.absol-radio-button {
+    display: inline;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.absol-radio-button input {
+    display: none;
+}
+
+
+.absol-radio-button > svg {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(1em + 4px);
+    height: calc(1em + 4px);
+}
+
+.absol-radio-button > svg .bound {
+    stroke: #929292;
+    fill: white;
+}
+
+.absol-radio-button:hover > svg .bound {
+    fill: #d6d6d6;
+    stroke: black;
+}
+
+.absol-radio-icon .border {
+}
+
+.absol-radio-button .dot {
+    transition: opacity 0.07s;
+    opacity: 0;
+    fill: #606060;
+}
+
+.absol-radio-button:hover .dot {
+    transition: opacity 0.07s;
+    opacity: 0;
+    fill: black;
+}
+
+.absol-radio-button.checked .dot {
+    opacity: 1;
+    transition: opacity 0.1s;
+}
+
+
+
+.absol-radio-button > span:last-child {
+    display: none;
+}
+
+
+.absol-radio-button.disabled {
+    cursor: default;
+}
+
+.absol-radio-button.disabled:hover .dot,
+.absol-radio-button.disabled .dot {
+    fill: #929292;
+}
+
+.absol-radio-button.disabled .bound,
+.absol-radio-button.disabled:hover .bound {
+    stroke: #929292;
+    fill: #ebebe4;
+}
+
+
+.absol-radio .standar-alone {
+    display: inline-block;
+}
+
+.absol-radio > span:not(:last-child) {
+    padding-right: 0.3em;
+}
+
+.absol-radio span:last-child {
+    padding-left: 0.3em;
+}
+
+input:checked ~ .absol-radio-icon .dot {
+    opacity: 1;
+}
+
+/*** module: node_modules/absol-acomp/css/radioinput.css ***/
+label.as-radio-input {
+    display: inline-block;
+    position: relative;
+    width: calc(1em + 2px);
+    height: calc(1em + 2px);
+    cursor: pointer;
+    font-size: inherit;
+    box-sizing: border-box;
+    overflow: hidden;
+    vertical-align: middle;
+    border-radius: 50%;
+    border: 1px solid var(--candy-border-color);
+    text-align: center;
+    background-color: white;
+    text-align: center;
+    white-space: nowrap;
+}
+
+label.as-radio-input:hover {
+    background-color: var(--candy-hover-background-color);
+}
+
+label.as-radio-input::after{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.as-radio-input .as-radio-input-check-mark {
+    display: inline-block;
+    vertical-align: middle;
+    width: 0.5em;
+    height: 0.5em;
+    background-color: #606060;
+    font-size: inherit;
+    border-radius: 50%;
+}
+
+.as-radio-input input.as-radio-input-value {
+    font-size: inherit;
+    position: absolute;
+    right: 100%;
+    top: 0;
+    opacity: 0.0;
+}
+
+input.as-radio-input-value:not(:checked) ~ .as-radio-input-check-mark {
+    display: none;
+}
+
+
+label.as-radio-input.as-disabled,
+label.as-radio-input.as-disabled:hover {
+    border-color: #929292;
+    background-color: #ebebe4;
+}
+
+/*** module: node_modules/absol-acomp/css/resizebox.css ***/
+.as-resize-box {
+    position: absolute;
+    /*or fixed*/
+    z-index: 1;
+    box-sizing: border-box;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.as-resize-box-body {
+    margin: -1px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    position: relative;
+    box-sizing: border-box;
+    border: solid 2px rgb(32, 150, 218);
+}
+
+.as-resize-box.as-can-move .as-resize-box-body {
+    cursor: move;
+    pointer-events: all;
+}
+
+.as-resize-box.as-can-click .as-resize-box-body {
+    pointer-events: all;
+}
+
+.as-resize-box.as-can-move .as-resize-box-dot,
+.as-resize-box.as-can-resize .as-resize-box-dot.right,
+.as-resize-box.as-can-resize .as-resize-box-dot.bottom,
+.as-resize-box.as-can-resize .as-resize-box-dot.right-bottom {
+    display: unset;
+
+}
+
+.as-resize-box-dot {
+    position: absolute;
+    width: 0.6em;
+    height: 0.6em;
+    background: rgb(32, 150, 218);
+    display: none;
+    pointer-events: all;
+}
+
+.as-resize-box-dot.left-top {
+    top: calc(-0.3em - 1px);
+    left: calc(-0.3em - 1px);
+    cursor: nw-resize;
+}
+
+.as-resize-box-dot.left-bottom {
+    bottom: calc(-0.3em - 1px);
+    left: calc(-0.3em - 1px);
+    cursor: sw-resize;
+}
+
+.as-resize-box-dot.left {
+    top: calc(50% - 0.3em);
+    left: calc(-0.3em - 1px);
+    cursor: w-resize;
+}
+
+.as-resize-box-dot.top {
+    top: calc(-0.3em - 1px);
+    left: calc(50% - 0.3em);
+    cursor: n-resize;
+}
+
+.as-resize-box-dot.bottom {
+    bottom: calc(-0.3em - 1px);
+    left: calc(50% - 0.3em);
+    cursor: s-resize;
+}
+
+.as-resize-box-dot.right-top {
+    top: calc(-0.3em - 1px);
+    right: calc(-0.3em - 1px);
+    cursor: ne-resize;
+}
+
+.as-resize-box-dot.right-bottom {
+    bottom: calc(-0.3em - 1px);
+    right: calc(-0.3em - 1px);
+    cursor: se-resize;
+}
+
+
+.as-resize-box-dot.right {
+    top: calc(50% - 0.3em);
+    right: calc(-0.3em - 1px);
+    cursor: e-resize;
+}
+
+.as-resize-box-overiding .as-resize-box-dot,
+.as-resize-box-overiding .as-resize-box-body {
+    cursor: unset;
+}
+
+.as-resize-box-overiding.body {
+    cursor: move !important;
+}
+
+
+.as-resize-box-overiding.left-top {
+    cursor: nw-resize !important;
+}
+
+.as-resize-box-overiding.left-bottom {
+    cursor: sw-resize !important;
+}
+
+.as-resize-box-overiding.left {
+    cursor: w-resize !important;
+}
+
+.as-resize-box-overiding.top {
+    cursor: n-resize !important;
+}
+
+.as-resize-box-overiding.bottom {
+    cursor: s-resize !important;
+}
+
+.as-resize-box-overiding.right-top {
+    cursor: ne-resize !important;
+}
+
+.as-resize-box-overiding.right-bottom {
+    cursor: se-resize !important;
+}
+
+
+.as-resize-box-overiding.right {
+    cursor: e-resize !important;
+}
+
+/*** module: node_modules/absol-acomp/css/ribbonbutton.css ***/
+.as-ribbon-button {
+    display: inline-block;
+    vertical-align: middle;
+    height: 30px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    border-radius: 0;
+    outline: none;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 1px 1px 1px 1px;
+    background-color: transparent;
+}
+
+.as-ribbon-button div,
+.as-ribbon-button span {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+.as-ribbon-button:hover {
+    background-color: rgba(169, 168, 169, 0.15);
+}
+
+.as-ribbon-button:active {
+    background-color: rgba(169, 168, 169, 0.3);
+}
+
+
+
+.as-ribbon-split-button:active:hover .as-ribbon-split-button-content > button,
+.as-ribbon-split-button:active .as-ribbon-split-button-content > button {
+    border-color: rgba(169, 168, 169, 0.3);
+}
+
+.as-ribbon-split-button:hover .as-ribbon-split-button-content > button {
+    border-color: rgba(169, 168, 169, 0.15);
+}
+
+.as-ribbon-button-icon {
+    font-size: 1.2em;
+    margin-right: 0.5em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+img.as-ribbon-button-icon,
+svg.as-ribbon-button-icon {
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.as-ribbon-button-text {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: inherit;
+}
+
+.as-ribbon-button.as-no-dropdown .mdi.mdi-chevron-down {
+    display: none;
+}
+
+/*** module: node_modules/absol-acomp/css/ribbonsplitbutton.css ***/
+.as-ribbon-split-button {
+    display: inline-block;
+    vertical-align: middle;
+    height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.as-ribbon-split-button div,
+.as-ribbon-split-button span,
+.as-ribbon-split-button button {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+
+.as-ribbon-split-button-content {
+    height: 100%;
+}
+
+.as-ribbon-split-button-content > button {
+    font-family: inherit;
+    border-radius: 0;
+    background-color: transparent;
+    height: 100%;
+    margin-right: 0;
+    outline: none;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: transparent;
+    vertical-align: middle;
+}
+
+
+.as-ribbon-split-button-content > button:hover {
+    background-color: rgba(169, 168, 169, 0.15);
+}
+
+.as-ribbon-split-button-content > button:active {
+    background-color: rgba(169, 168, 169, 0.3);
+}
+
+
+.as-ribbon-split-button-primary {
+    font-size: inherit;
+    padding-left: 0.5em;
+    padding-right: 0;
+    border-width: 1px 0px 1px 1px;
+}
+
+.as-ribbon-split-button-extend {
+    color: rgb(37, 36, 35);
+    width: 16px;
+    padding: 0;
+    text-align: center;
+    font-size: 20px;
+    border-width: 1px 1px 1px 0px;
+}
+
+.as-ribbon-split-button-extend span:before {
+    margin-left: -3px;
+}
+
+
+.as-ribbon-split-button:active:hover .as-ribbon-split-button-content > button,
+.as-ribbon-split-button:active .as-ribbon-split-button-content > button {
+    border-color: rgba(169, 168, 169, 0.3);
+}
+
+.as-ribbon-split-button:hover .as-ribbon-split-button-content > button {
+    border-color: rgba(169, 168, 169, 0.15);
+}
+
+.as-ribbon-split-button-icon {
+    font-size: 1.2em;
+    margin-right: 0.5em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+img.as-ribbon-split-button-icon,
+svg.as-ribbon-split-button-icon {
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.as-ribbon-split-button-text {
+    vertical-align: middle;
+    font-size: inherit;
+}
+
+.as-ribbon-split-button.as-no-dropdown .as-ribbon-split-button-extend {
+    display: none;
+}
+
+.as-ribbon-split-button.as-no-dropdown .as-ribbon-split-button-primary {
+    padding-right: 5px;
+    border-width: 1px 1px 1px 1px;
+}
+
+/*** module: node_modules/absol-acomp/css/rotatedtext.css ***/
+.as-rotated-text {
+
+}
+
+.as-rotated-text::after {
+    content: "o";
+    color: transparent;
+    display: inline;
+}
+
+.as-rotated-text-content {
+    transform: rotate(0deg);
+    transform-origin: 0.3em 50%;
+    display: block;
+    zoom: 1.001;
+}
+
+
+.as-rotated-text-anchor{
+    position: fixed;
+    z-index: 1000;
+}
+
+.as-rotated-text,.as-rotated-text-anchor,  .as-rotated-text-content{
+    font: inherit;
+}
+
+/*** module: node_modules/absol-acomp/css/searcher.css ***/
+.absol-search-text-input {
+    position: relative;
+    height: 2em;
+    border-radius: 0.3em;
+    border: solid 1px #a9a9a9;
+    font-size: 14px;
+    background-color: white;
+}
+
+.absol-search-text-input.focus {
+    outline: solid 1px rgba(30, 30, 255, 0.4);
+}
+
+.absol-search-text-input-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 2em;
+}
+
+.absol-search-text-button-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2em;
+    bottom: 0em;
+}
+
+.absol-search-text-button-container button {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background: transparent;
+    padding: 0;
+    font-size: 1em;
+}
+
+.absol-search-text-button-container button>svg {
+    height: 1.14285714286em;
+    width: 1.14285714286em;
+    fill: rgb(132, 132, 132);
+}
+
+.absol-search-text-input-container input {
+    width: 100%;
+    height: 100%;
+    font-size: 1em;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    padding-left: 0.6em;
+}
+
+.absol-search-text-input:not(.searching) svg.times{
+    display: none;
+}
+
+.absol-search-text-input.searching svg.find{
+    display: none;
+}
+
+.absol-search-text-input-container input::-webkit-search-cancel-button{
+    display: none;
+}
+
+/*** module: node_modules/absol-acomp/css/selecttable.css ***/
+.absol-select-table-render-space {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1000;
+    visibility: hidden;
+    font-size: 14px;
+}
+
+.absol-select-table {
+    border: solid 1px #a9a9a9;
+    min-width: 26em;
+    overflow: hidden;
+}
+
+.absol-select-table-header {
+    display: block;
+    position: relative;
+    box-sizing: content-box;
+    height: 2.2857142857em;
+}
+
+.absol-select-table-searchtextinput-container {
+    position: absolute;
+    left: 0.14285714285em;
+    top: 0.14285714285em;
+    height: 2em;
+    right: 10em;
+    /* background-color: cyan; */
+}
+
+.absol-select-table.disable-move-all .absol-select-table-buttons-container {
+    display: none;
+}
+
+.absol-select-table.disable-move-all .absol-select-table-searchtextinput-container {
+    right: 0.14285714285em !important;
+}
+
+.absol-select-table-buttons-container {
+    position: absolute;
+    right: 0.14285714285em;
+    top: 0.14285714285em;
+    width: 10.7142857143em;
+    height: 2em;
+    white-space: nowrap;
+}
+
+.absol-select-table-buttons-container>button {
+    height: 2em;
+    font-size: 1em;
+    background-color: transparent;
+    border: none;
+    padding: 0 0.5em;
+    margin: 0;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.absol-select-table-buttons-container>button:focus {
+    outline: none;
+}
+
+.absol-select-table-buttons-container>button:hover {
+    color: #a9a9a9;
+}
+
+.absol-select-table-buttons-container>button:active {
+    color: #a9a9ff;
+}
+
+.absol-select-table-body {
+    margin: 0.14285714285em;
+    white-space: nowrap;
+}
+
+.absol-select-table-items-scroller {
+    width: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+    overflow-y: auto;
+}
+
+.absol-select-table-items-scroller .absol-scroll-button {
+    background-color: rgba(1, 1, 30, 0.1);
+}
+
+.absol-select-table-items-scroller .absol-scroll-bar-v-container {
+    width: 0.69em;
+}
+
+.absol-select-table-selected-search-items-container,
+.absol-select-table-nonselected-search-items-container,
+.absol-select-table.searching .absol-select-table-selected-items-container,
+.absol-select-table.searching .absol-select-table-nonselected-items-container {
+    display: none;
+}
+
+.absol-select-table.searching .absol-select-table-selected-search-items-container,
+.absol-select-table.searching .absol-select-table-nonselected-search-items-container {
+    display: block;
+    padding-right: 0.7em;
+}
+
+.absol-select-table-nonselected-items-container,
+.absol-select-table-selected-items-container {
+    padding-right: 0.7em;
+}
+
+.absol-select-table-nonselected-items-container>.absol-select-table-item,
+.absol-select-table-selected-items-container>.absol-select-table-item,
+.absol-select-table-nonselected-search-items-container>.absol-select-table-item,
+.absol-select-table-selected-search-items-container>.absol-select-table-item {
+    margin: 0.14285714285em;
+}
+
+.absol-select-table-item {
+    display: block;
+    line-height: 2em;
+    min-height: 2em;
+    position: relative;
+    background-color: rgba(169, 169, 169, 0.05);
+    border: solid 1px rgb(235, 235, 235);
+    border-radius: 0.2em;
+    overflow: hidden;
+    -webkit-user-select: none;
+    /* Safari 3.1+ */
+    -moz-user-select: none;
+    /* Firefox 2+ */
+    -ms-user-select: none;
+    /* IE 10+ */
+    user-select: none;
+    /* Standard syntax */
+    padding-left: 0.69em;
+    padding-right: 1.8em;
+    box-sizing: border-box;
+}
+
+.absol-select-table-item:hover {
+    background-color: rgba(169, 169, 169, 0.1);
+}
+
+.absol-select-table-item-right-container {
+    right: 0.3em;
+    bottom: 0.3em;
+    top: 0.3em;
+    padding: 0.2em;
+    width: 1.4em;
+    position: absolute;
+    border-radius: 0.2em;
+    box-sizing: border-box;
+ ;
+}
+
+.absol-select-table-item-right-container:hover {
+    background-color: rgba(169, 169, 169, 0.3);
+}
+
+span.absol-select-table-item-text {
+    white-space: normal;
+    
+}
+
+.absol-select-table-item-right-container-table{
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+.absol-select-table-item-right-container-cell{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.absol-select-table-item-right-container svg {
+    width: 1em;
+    height: 1em;
+    display: none;
+}
+
+/* clearfix
+.absol-select-table-none-nonselected-items-container::after,
+.absol-select-table-none-selected-items-container::after {
+    content: "";
+    display:table;
+    clear: both;
+} */
+
+.absol-select-table-selected-items-container .absol-select-table-item-right-container svg.sub-icon,
+.absol-select-table-selected-search-items-container .absol-select-table-item-right-container svg.sub-icon {
+    display: block;
+    stroke: rgb(243, 61, 61);
+    fill: rgb(226, 100, 100);
+}
+
+.absol-select-table-nonselected-items-container .absol-select-table-item-right-container svg.add-icon,
+.absol-select-table-nonselected-search-items-container .absol-select-table-item-right-container svg.add-icon {
+    display: block;
+    fill: rgb(100, 226, 167);
+    stroke: rgb(61, 185, 243);
+}
+
+.absol-select-table.portrait {}
+
+/*** module: node_modules/absol-acomp/css/selecttreemenu.css ***/
+.absol-selecttreemenu  .absol-tree-list-item-desc-container{
+    right: 30px;
+}
+
+
+.absol-selectmenu-holder-item .absol-tree-list-item-parent:hover {
+    background-color: transparent;
+}
+
+/*** module: node_modules/absol-acomp/css/singlepage.css ***/
+.absol-single-page {
+    position: relative;
+}
+
+
+.absol-single-page-header {
+    box-sizing: border-box;
+    z-index: 2;
+    display: block;
+}
+
+.absol-single-page-footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-sizing: border-box;
+}
+
+
+.absol-single-page-scroller-viewport {
+    min-height: 100%;
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.absol-single-page-scroller {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+.absol-single-page.as-viewport-full > .absol-single-page-scroller > .absol-single-page-scroller-viewport {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.absol-single-page.as-no-scroll > .absol-single-page-scroller {
+    overflow: hidden;
+}
+
+/*** module: node_modules/absol-acomp/css/snackbar.css ***/
+.as-snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 0;
+    font-size: 17px;
+    opacity: 0;
+    transition: opacity 0.25s ease-in, bottom 0.25s ease-in;
+
+}
+
+.as-snackbar.as-show {
+    visibility: visible;
+    bottom: 30px;
+    opacity: 1;
+}
+
+.as-snackbar.as-hiding{
+    transition: opacity 0.5s ease-out, bottom 0.5s ease-out;
+    visibility: visible;
+    bottom: 0;
+    opacity: 0;
+}
+
+
+
+/*** module: node_modules/absol-acomp/css/spaninput.css ***/
+.absol-span-input {
+    white-space: pre;
+}
+
+.absol-span-input:focus {
+    outline-color: rgba(30, 150, 255, 0.3);
+    outline-width: 1px;
+}
+
+.absol-span-input:empty::before {
+    content: " ";
+    display: inline;
+    white-space: pre;
+}
+
+.absol-span-input.absol-span-input-empty-minus:empty::before {
+    content: "-";
+}
+
+/*** module: node_modules/absol-acomp/css/statictabbar.css ***/
+.absol-static-tabbar {
+    position: relative;
+}
+
+.absol-static-tabbar-button {
+    height: 2em;
+    background-color: transparent;
+    border: none;
+    font-size: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    color: rgb(104, 104, 104);
+}
+
+.absol-static-tabbar-button:hover {
+    color: rgb(30, 30, 55);
+}
+
+.absol-static-tabbar-button.active {
+    color: black;
+}
+
+.absol-static-tabbar-button:focus {
+    outline: none;
+}
+
+.absol-static-tabbar-button>span {
+    font-size: 0.7em;
+}
+
+.absol-static-tabbar-hline {
+    border-bottom: solid 1px rgb(127, 127, 128);
+    height: 100%;
+}
+
+.absol-static-tabbar-active-box {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    width: 0;
+    transition: left 0.15s, width 0.15s;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    box-sizing: border-box;
+    /* z-index: 1; */
+}
+
+.absol-static-tabbar.dark .absol-static-tabbar-hline{
+    border-bottom-color: white;
+}
+
+.absol-static-tabbar.dark .absol-static-tabbar-button.active{
+    color: white;
+}
+
+.absol-static-tabbar.dark .absol-static-tabbar-button {
+    color: rgb(204, 204, 204);
+}
+
+/*** module: node_modules/absol-acomp/css/switch.css ***/
+.absol-switch {
+    position: relative;
+    display: inline-block;
+    width: 2.2em;
+    height: 1.2em;
+    vertical-align: middle;
+}
+
+.absol-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.absol-switch-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 0.6em;
+}
+
+.absol-switch-slider:before {
+    position: absolute;
+    content: "";
+    height: 1em;
+    width: 1em;
+    left: 0.1em;
+    bottom: 0.1em;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 0.5em;
+}
+
+input:checked+.absol-switch-slider {
+    background-color: #2196F3;
+}
+
+input:focus+.absol-switch-slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.absol-switch-slider:before {
+    -webkit-transform: translateX(1em);
+    -ms-transform: translateX(1em);
+    transform: translateX(1em);
+}
+
+/* Rounded absol-switch-sliders */
+.absol-switch.square .absol-switch-slider {
+    border-radius: 0;
+}
+
+.absol-switch.square .absol-switch-slider:before {
+    border-radius: 0;
+}
+
+.absol-switch.disabled {
+    pointer-events: none;
+}
+
+.absol-switch.disabled .absol-switch-slider:before{
+    background-color: rgb(234, 234, 234);
+}
+
+.absol-switch.disabled input:checked+.absol-switch-slider {
+    background-color: rgb(141, 188, 226);
+}
+
+.absol-switch.disabled .absol-switch-slider {
+    background-color: rgb(171, 171, 171);
+}
+
+
+
+/*** module: node_modules/absol-acomp/css/tabview.css ***/
+.absol-tabbar {
+    white-space: normal;
+    height: 2em;
+    white-space: nowrap;
+}
+
+
+.absol-tabbar .absol-hscroller-viewport {
+    overflow-y: hidden;
+}
+
+.absol-tabbar .absol-tabbar-button {
+    height: 100%;
+}
+
+/* .absol-tabbar .absol-scrollbar-container {
+    height: 5px;
+} */
+
+.absol-tabbar .absol-scrollbar-container.horizontal {
+    bottom: -2px;
+}
+
+.absol-tabbar .absol-scrollbar-container {
+    opacity: 0;
+    transition: opacity 0.2s;
+    background: rgba(169, 169, 169, 0.1);
+}
+
+.absol-tabbar:hover .absol-scrollbar-container,
+.absol-tabbar:active .absol-scrollbar-container {
+    opacity: 1;
+}
+
+.absol-tabbar .absol-scrollbar-button {
+    background-color: rgba(33, 33, 40, 0.1);
+}
+
+.absol-tabbar .absol-scrollbar-button:hover {
+    background-color: rgba(33, 33, 40, 0.3);
+}
+
+
+.absol-tabbar .absol-scrollbar-button:active,
+.absol-tabbar .absol-hscrollbar.absol-active .absol-scrollbar-button {
+    background-color: rgba(47, 47, 55, 0.4);
+
+}
+
+
+.absol-tabbar-button {
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: rgb(45, 45, 45);
+    color: rgb(200, 200, 200);
+    margin-right: 1px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+}
+
+.absol-tabbar .absol-tabbar-button-active {
+    background-color: rgb(30, 30, 30);
+    color: rgb(250, 250, 252);
+}
+
+.absol-tabbar-button-text,
+.absol-tabbar-button-icon-container > span {
+    display: inline;
+    vertical-align: middle;
+    font-size: 1em;
+}
+
+.absol-tabbar-button .absol-tabbar-button-close,
+.absol-tabbar-button .absol-tabbar-button-close-circle
+{
+    visibility: hidden;
+    color: rgb(190, 190, 190);
+}
+
+.absol-tabbar-button-icon-container {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.5em;
+}
+
+
+
+
+.absol-tabbar-button:hover .absol-tabbar-button-close,
+.absol-tabbar-button-active .absol-tabbar-button-close,
+.absol-tabbar-button:hover .absol-tabbar-button-close-circle,
+.absol-tabbar-button-active .absol-tabbar-button-close-circle
+{
+    visibility: visible;
+    color: red;
+}
+
+.absol-tabbar-button-active .absol-tabbar-button-modified-flag {
+    color: lightblue;
+}
+
+.absol-tabbar-button-modified-flag {
+    color: mediumaquamarine;
+}
+
+.absol-tabbar-button:not(.absol-tabbar-button-modified) .absol-tabbar-button-modified-flag,
+.absol-tabbar-button.absol-tabbar-button-modified:not(.active) .absol-tabbar-button-icon-container:hover .absol-tabbar-button-modified-flag,
+.absol-tabbar-button.absol-tabbar-button-modified .absol-tabbar-button-icon-container:not(:hover) .absol-tabbar-button-close,
+.absol-tabbar-button:not(.absol-tabbar-button-modified) .absol-tabbar-button-icon-container:not(:hover) .absol-tabbar-button-close-circle,
+.absol-tabbar-button:not(.absol-tabbar-button-modified) .absol-tabbar-button-icon-container:hover .absol-tabbar-button-close,
+.absol-tabbar-button.absol-tabbar-button-modified .absol-tabbar-button-close-circle,
+.absol-tabbar-button.absol-tabbar-button-modified .absol-tabbar-button-icon-container:not(:hover) .absol-tabbar-button-close
+{
+    display: none;
+}
+
+
+.absol-button-range {
+}
+
+
+.absol-tabview {
+    position: relative;
+}
+
+
+.absol-tabview-container {
+    position: absolute;
+    top: 2em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+}
+
+
+.absol-tabview-container.absol-tabview-container-hidden {
+    z-index: -9999;
+    visibility: hidden;
+    opacity: 0;
+
+}
+
+.absol-tabview-container.absol-tabview-container-hidden *,
+.absol-tabview-container.absol-tabview-container-hidden {
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+
+.absol-tabview-container > div,
+.absol-tabview-container > pre {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.absol-tabview-container > pre {
+    margin: 0;
+}
+
+.absol-tabview .absol-tabbar-button {
+    border-radius: 10px 10px 0 0;
+    height: 2em;
+    box-sizing: border-box;
+    border: solid 1px #ccc;
+    background-color: white;
+    color: black;
+    padding-left: 1em;
+    padding-right: 0.357em;
+    margin-right: 0.357em;
+}
+
+.absol-tabview .absol-tabbar {
+    height: 2em;
+    overflow-y: hidden;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.absol-tabview .absol-tabbar-button-active {
+    background-color: #5bc0de;
+    border-color: #46b8da;
+    color: white;
+}
+
+/* .absol-tabview .absol-tabbar-button-close {
+    color: rgb(170, 170, 170);
+    line-height: 1.5em;
+    margin-left: 1em;
+    font-size: 1.3em;
+} */
+
+.absol-tabview .absol-tabbar-button-close:hover {
+    color: red;
+}
+
+
+/************** Mini version - like window form ***********************/
+
+.absol-tabview.xp-tiny .absol-tabbar {
+    height: 22px;
+    border-bottom: none;
+}
+
+.absol-tabview.xp-tiny .absol-tabbar-button {
+    height: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 0;
+    margin: 0;
+    vertical-align: bottom;
+    margin-top: 2px;
+    background-color: rgb(242, 242, 242);
+    color: black;
+    position: relative;
+}
+
+.absol-tabview.xp-tiny::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    border-bottom: solid 1px #ccc;
+    box-sizing: border-box;
+}
+
+.absol-tabview.xp-tiny .absol-tabbar-button.absol-tabbar-button-active {
+    height: 22px;
+    margin-top: 0;
+    background-color: white;
+    border-top-color: #ccc;
+    border-left-color: #ccc;
+    border-right-color: #ccc;
+    border-bottom-color: white;
+}
+
+
+.absol-hscroller.absol-tabbar.disabled .absol-scrollbar-container {
+    visibility: hidden;
+}
+
+.absol-tabview.absol-tabview.xp-tiny .absol-tabbar-button-close {
+    line-height: 18px;
+}
+
+.absol-tabview.xp-tiny .absol-tabbar-button-icon-container
+{
+    display: none;
+}
+
+.absol-tabview.xp-tiny .absol-tabview-container {
+    top: 22px;
+}
+
+.absol-tabview.xp-tiny .absol-tab-absol {
+    border-left: solid 1px #ccc;
+    border-right: solid 1px #ccc;
+    border-bottom: solid 1px #ccc;
+    box-sizing: border-box;
+}
+
+
+.absol-tabview.as-without-close-button > .absol-tabbar .absol-tabbar-button .absol-tabbar-button-icon-container {
+    display: none;
+}
+
+.absol-tabview.as-without-close-button > .absol-tabbar .absol-tabbar-button {
+    padding-right: 1em;
+}
+
+/************************ Like Metro theme *********************/
+
+.absol-tabview.metro-flat > .absol-tabbar .absol-tabbar-button {
+    border-radius: 0;
+    margin-right: 0;
+    margin-left: 0;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    border-right: solid 1px rgba(169, 169, 169, 0.3);
+    font-size: 1em;
+}
+
+.absol-tabview.metro-flat > .absol-tabbar {
+    box-shadow: 0px -1px 0px 0px #ccc;
+}
+
+
+/*** module: node_modules/absol-acomp/css/tablescroller.css ***/
+.absol-table-scroller {
+    position: relative;
+    overflow: hidden;
+}
+
+.absol-table-scroller-render-space {
+    position: fixed;
+    overflow: scroll;
+    left: 0;
+    top: 0;
+    max-width: calc(99vw - 30px);
+    max-height: calc(99vh - 30px);
+    opacity: 0;
+    z-index: -1000;
+    visibility: hidden;
+}
+
+
+.absol-table-scroller-viewport {
+    box-sizing: border-box;
+    overflow: scroll;
+    width: calc(100% + 17px);
+    height: calc(100% + 17px);
+}
+
+.absol-table-scroller-fixed-viewport {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    overflow: hidden;
+    /*pointer-events: none;*/
+}
+
+.absol-table-scroller-fixed-viewport>table>thead,
+.absol-table-scroller-fixed-viewport>table {
+    border-top-color: transparent !important;
+}
+
+.absol-table-scroller-fixed-hidden {
+    visibility: hidden !important;
+    opacity: 0 !important;
+    border-color: transparent !important;
+
+}
+
+.absol-table-scroller-header-hscroller {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 9;
+    overflow: hidden;
+    /*pointer-events: none;*/
+}
+
+.absol-table-scroller-header-hscroller-viewport {
+    max-width: 100%;
+    overflow-x: scroll;
+    margin-bottom: -17px;/*default*/
+}
+
+.absol-table-scroller-header-hscroller-viewport table {
+    table-layout: fixed;
+}
+
+
+.absol-table-scroller-left-vscroller {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 7;
+    /* width: 200px; */
+    overflow-x: hidden;
+    /*pointer-events: none;*/
+}
+
+.absol-table-scroller-left-vscroller-viewport {
+    max-height: 100%;
+    overflow-y: scroll;
+    min-width: calc(100% + 19px);
+    overflow-x: hidden;
+}
+
+
+.absol-table-scroller-head-line,
+.absol-table-scroller-left-line {
+    z-index: 30;
+    /*pointer-events: none;*/
+    position: absolute;
+}
+
+.absol-table-scroller-head-line {
+    left: 0;
+    width: calc(100% - 6px);
+    border-bottom: solid 2px rgb(169, 169, 170);
+    width: 100%;
+}
+
+.absol-table-scroller-left-line {
+    top: 0;
+    border-right: solid 2px rgb(169, 169, 170);
+    height: calc(100% - 6px);
+    height: 100%;
+}
+
+
+.absol-table-scroller.scroll-v .absol-table-scroller-head-line {
+    width: 100%;
+}
+
+.absol-table-scroller.scroll-h .absol-table-scroller-left-line {
+    height: 100%;
+}
+
+
+.absol-table-scroller:not(.scroll-v) .absol-table-scroller-head-line {
+    display: none;
+}
+
+.absol-table-scroller:not(.scroll-h) .absol-table-scroller-left-line {
+    display: none;
+}
+
+
+
+.absol-table-scroller-vscrollbar-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8px;
+    bottom: 0;
+    z-index: 31;
+}
+
+.absol-table-scroller-vscrollbar-container .absol-scrollbar-button {
+    left: 1px;
+    right: 1px;
+}
+
+
+.absol-table-scroller-vscrollbar-container>div,
+.absol-table-scroller-hscrollbar-container>div {
+    width: 100%;
+    height: 100%;
+}
+
+.absol-table-scroller-hscrollbar-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 12px;
+    bottom: 0;
+    z-index: 31;
+}
+
+
+.absol-table-scroller-hscrollbar-container .absol-scrollbar-button {
+    top: 1px;
+    bottom: 1px;
+}
+
+
+.absol-table-scroller:not(.scroll-v) .absol-table-scroller-vscrollbar-container {
+    display: none;
+}
+
+.absol-table-scroller:not(.scroll-h) .absol-table-scroller-hscrollbar-container {
+    display: none;
+}
+
+
+.absol-table-scroller.scroll-h .absol-table-scroller-vscrollbar-container {
+    bottom: 12px;
+}
+
+.absol-table-scroller.scroll-v .absol-table-scroller-hscrollbar-container {
+    right: 8px;
+}
+
+.absol-table-scroller-fixed-table{
+    table-layout: fixed;
+    box-sizing: border-box;
+
+}
+
+.absol-table-scroller-fixed-table *,
+.absol-table-scroller-header-hscroller *{
+    box-sizing: border-box;
+}
+
+/*** module: node_modules/absol-acomp/css/tablevscroller.css ***/
+.absol-table-vscroller {
+    position: relative;
+}
+
+.absol-table-vscroller-head {
+    position: absolute;
+    z-index: 2;
+    width: 300px;
+    height: 20px;
+    top: 0;
+    left: 0;
+}
+
+.absol-table-vscroller-head-line{
+    position: absolute;
+    left: 0;
+    z-index: 3;
+    pointer-events: none;
+    border-bottom:solid 2px rgb(169, 169, 170); 
+    width: 100%;
+}
+
+.absol-table-vscroller.scroll-v .absol-table-vscroller-head-line{
+    width: calc(100% - 7px);
+}
+
+.absol-table-vscroller-viewport {
+    max-height: 100%;
+    padding-bottom: 1px;
+    padding-top: 1px;
+    overflow-y: auto;
+}
+
+.absol-table-vscroller-viewport > table{
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/*** module: node_modules/absol-acomp/css/textarea2.css ***/
+.absol-textarea2{
+    overflow: hidden;
+    resize: none;
+    box-sizing: border-box;
+    height: 1.425em;
+} 
+
+/*** module: node_modules/absol-acomp/css/textclipboard.css ***/
+.absol-text-clipboard {
+    opacity: 0;
+    font-size: 1px;
+    height: 1px;
+    width: 1px;
+}
+
+/*** module: node_modules/absol-acomp/css/timeinput.css ***/
+.ac-time-input {
+    box-sizing: border-box;
+    height: calc(2em + 2px);
+    width: 9em;
+    border: solid 1px #d6d6d6;
+    border-radius: 2px;
+    font-size: 14px;
+    outline: none;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: white;
+    position: relative;
+}
+
+.ac-time-input.as-disabled {
+    color: rgb(102, 102, 102);
+    pointer-events: none;
+}
+
+.ac-time-input.as-must-not-null .as-time-input-clear-btn {
+    display: none;
+}
+
+.ac-time-input input {
+    font: inherit;
+    outline: none;
+    width: calc(100% - 30px);
+    height: 100%;
+    border: none;
+    display: block;
+    padding: 0 0 0 var(--as-input-horizontal-padding);
+    -webkit-user-select: auto;
+    user-select: auto;
+    -webkit-user-drag: none;
+    color: inherit;
+}
+
+.as-time-input-icon-btn {
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    border-left: 1px solid #ddd;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: calc(2em + 1px);
+    box-sizing: border-box;
+    background-color: rgba(169, 169, 169, 0.1);
+    cursor: pointer;
+    border-radius: 0;
+    font-size: inherit;
+    color: inherit;
+}
+
+
+.as-time-input-icon-btn > span {
+    font-size: 1.14em;
+}
+
+
+.as-time-input-icon-btn:hover {
+    background-color: rgba(169, 169, 169, 0.25);
+}
+
+.as-time-input-icon-btn:active {
+    background-color: rgba(169, 169, 169, 0.5);
+}
+
+
+.as-time-input-icon-btn.as-disabled {
+    color: rgb(102, 102, 102);
+    pointer-events: none;
+}
+
+
+.as-time-input-clear-btn {
+    font-size: inherit;
+    position: absolute;
+    right: calc(2em + 2px);
+    height: 2em;
+    top: calc(50% - 1em);
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+    color: #bbb;
+    visibility: hidden;
+}
+
+
+.ac-time-input.as-value-null .as-time-input-clear-btn {
+    display: none;
+}
+
+.as-time-input-clear-btn:hover {
+    color: rgb(132, 132, 132);
+}
+
+.as-time-input-clear-btn:active {
+    color: #525555;
+}
+
+input:focus + .as-time-input-clear-btn,
+.ac-time-input .as-time-input-clear-btn {
+    visibility: visible;
+}
+
+
+/*.ac-time-input-picker-ctn {*/
+/*    position: fixed;*/
+/*}*/
+
+/*.ac-time-input > span {*/
+/*    font-size: 1em;*/
+/*    line-height: 2em;*/
+/*}*/
+
+/*.ac-time-input-picker-ctn-hidden {*/
+/*    z-index: -1000;*/
+/*    opacity: 0;*/
+/*    visibility: hidden;*/
+/*}*/
+
+/*.ac-time-input-picker-ctn-hidden:not(.absol-follower) {*/
+/*    transition: all 0.1s;*/
+/*}*/
+
+/*.ac-time-input.as-disabled {*/
+/*    color: rgb(102, 102, 102);*/
+/*    pointer-events: none;*/
+/*}*/
+
+/*** module: node_modules/absol-acomp/css/timepicker.css ***/
+.ac-time-picker {
+    /*like chrome-calender*/
+    display: inline-block;
+    font-family: Arial;
+    font-size: 14px;
+    padding: 0.6em;
+    border: solid 1px rgb(191, 191, 191);
+    box-shadow: 1px 1px 2px rgb(240, 240, 240);
+    z-index: 100;
+    touch-action: manipulation;
+    user-select: none;
+    background-color: rgb(255, 255, 255);
+    white-space: initial;
+}
+
+
+@media screen and (orientation: portrait) {
+    .ac-time-picker.ac-time-picker-touch {
+        font-size: 5vw;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .ac-time-picker.ac-time-picker-touch {
+        font-size: 4vh;
+    }
+}
+
+
+.ac-time-picker:not(.ac-time-picker-clock-mode) .ac-time-picker-set-clock,
+.ac-time-picker:not(.ac-time-picker-clock-mode) .ac-time-picker-keyboard-btn,
+.ac-time-picker:not(.ac-time-picker-touch) .ac-time-picker-keyboard-btn,
+.ac-time-picker:not(.ac-time-picker-time-mode) .ac-time-picker-set-time,
+.ac-time-picker:not(.ac-time-picker-time-mode) .ac-time-picker-clock-btn {
+    display: none;
+}
+
+.ac-time-picker-set-clock-header {
+    font-size: 2.8em;
+    text-align: center;
+    min-width: 4.28571428571em;
+    font-weight: bold;
+
+}
+
+.ac-time-picker-set-clock-header > span {
+    font-size: inherit;
+}
+
+.ac-time-picker-clock {
+    width: 12em;
+    height: 12em;
+}
+
+.ac-time-picker-clock-hour-pm {
+    fill: rgb(20, 20, 20);
+    font-size: 0.7em;
+}
+
+
+.ac-time-picker-clock-hour-am {
+    fill: black;
+    font-size: 0.8em;
+}
+
+.ac-time-picker-clock-minute {
+    fill: black;
+    font-size: 0.8em;
+}
+
+
+.ac-time-picker-clock-center,
+.ac-time-picker-clock-select-circle {
+    fill: rgb(115, 166, 248);
+}
+
+.ac-time-picker-clock-select-center {
+    fill: white;
+}
+
+.ac-time-picker-clock-select-line {
+    stroke-width: 1;
+    stroke: rgb(115, 166, 248);
+}
+
+
+.ac-time-picker-hour,
+.ac-time-picker-minute {
+    outline: none;
+}
+
+.ac-time-picker-edit-hour .ac-time-picker-hour,
+.ac-time-picker-edit-minute .ac-time-picker-minute {
+    color: rgb(62, 125, 189);
+}
+
+.ac-time-picker:not(.ac-time-picker-edit-hour) .ac-time-picker-clock-hour-ctn,
+.ac-time-picker:not(.ac-time-picker-edit-minute) .ac-time-picker-clock-minute-ctn {
+    visibility: hidden;
+}
+
+.ac-time-picker:not(.ac-time-picker-edit-hour):not(.ac-time-picker-edit-minute) .ac-time-picker-clock {
+    display: none;
+}
+
+.ac-time-picker-hour:empty::before,
+.ac-time-picker-minute:empty::before {
+    content: "0";
+    display: inline;
+}
+
+.ac-time-picker-footer {
+    display: block;
+    position: relative;
+    min-height: 1.5em;
+    min-width: 12em;
+}
+
+.ac-time-picker-footer-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.ac-time-picker-footer button {
+    font-size: 1em;
+    height: 1.5em;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
+
+.ac-time-picker-footer button:hover,
+.ac-time-picker-footer button:focus {
+    background-color: rgba(170, 170, 170, 0.3);
+}
+
+.ac-time-picker-footer > button {
+    margin-right: 1em;
+}
+
+.ac-time-picker-footer-right > button {
+    margin-left: 1em;
+}
+
+
+.ac-time-picker-footer button .mdi {
+    font-size: 1.3em;
+}
+
+
+/* .ac-time-picker:not(.ac-time-picker-touch) .ac-time-picker-keyboard-btn {
+    display: none;
+} */
+
+/* keyboard-outline */
+
+.ac-time-picker-set-time-header {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.ac-time-picker-set-time-label {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 0.3em;
+}
+
+.ac-time-picker-set-time-input-group {
+    margin-bottom: 0.3em;
+    font-size: 1em;
+    white-space: nowrap;
+}
+
+.ac-time-picker-set-time-input-hm > input {
+    height: 1.2em;
+    line-height: 1.2em;
+    width: 2em;
+    text-align: center;
+    font-size: 1em;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgb(70, 70, 72);
+    outline: none;
+}
+
+.ac-time-picker-set-time-input-label-hm {
+    font-size: 1em;
+    white-space: nowrap;
+
+}
+
+.ac-time-picker-set-time-input-label-hm span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1em;
+
+}
+
+
+.ac-time-picker-set-time-input-label-hm > span:first-child {
+    width: 2em;
+}
+
+/*** module: node_modules/absol-acomp/css/timeselectinput.css ***/
+.as-time-select-input {
+    display: inline-block;
+    position: relative;
+    height: 30px;
+    border: solid 1px #d6d6d6;
+    border-radius: 2px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 14px;
+    outline: none;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    white-space: nowrap;
+    padding-right: 30px;
+    --list-min-width: unset;
+    width: calc(var(--list-min-width) + 30px);
+    min-width: calc(var(--list-min-width) + 30px);
+}
+
+.as-time-select-input.as-disabled {
+    pointer-events: none;
+    background-color: #ebebe4;
+}
+
+.as-time-select-input-text {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 0;
+    background-color: transparent;
+}
+
+/*** module: node_modules/absol-acomp/css/toast.css ***/
+.as-toast-list {
+    position: fixed;
+    z-index: 1100000000;
+    width: 355px;
+    max-height: calc(100vh - 20px);
+    overflow-y: auto;
+}
+
+.as-toast-list > .as-toast {
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.35);
+}
+
+
+.as-toast-list.as-se {
+    bottom: 10px;
+    right: 10px;
+}
+
+.as-toast-list.as-sw {
+    bottom: 10px;
+    left: 10px;
+}
+
+.as-toast-list.as-ne {
+    top: 10px;
+    right: 10px;
+}
+
+.as-toast-list.as-nw {
+    top: 10px;
+    left: 10px;
+}
+
+
+.as-toast-list:empty {
+    visibility: hidden;
+}
+
+.as-toast-list.as-ne > .as-toast,
+.as-toast-list.as-nw > .as-toast {
+    margin-bottom: 5px;
+}
+
+.as-toast-list.as-se > .as-toast,
+.as-toast-list.as-sw > .as-toast {
+    margin-top: 5px;
+}
+
+
+.as-toast {
+    display: block;
+    max-width: 350px;
+    overflow: hidden;
+    background-color: white;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+}
+
+.as-toast-header {
+    display: flex;
+    display: -ms-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0.25em 0.75em;
+    color: #6c757d;
+    background-clip: padding-box;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.as-toast-header strong {
+    text-align: left;
+    margin-right: auto;
+}
+
+.as-toast-variant-color {
+    margin-right: 0.5em;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: var(--variant-color-primary);
+    width: 1.25em;
+    height: 1.25em;
+}
+
+
+.as-toast-close-btn {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: inherit;
+    margin-left: 0.25em;
+    margin-bottom: 0.25em;
+}
+
+.as-toast-close-btn:hover {
+    color: black;
+}
+
+.as-toast-close-btn span {
+    font-size: 1.5em;
+    text-shadow: 0 1px 0 currentColor;
+}
+
+.as-toast-body {
+
+}
+
+.as-toast-message {
+    padding: 0.75em;
+}
+
+
+.as-toast.as-not-appeared {
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.as-toast.as-not-appeared.as-appearing {
+    opacity: 1;
+}
+
+.as-toast.as-appeared {
+    transition: opacity 0.5s;
+    opacity: 1;
+}
+
+.as-toast.as-disappearing {
+    opacity: 0;
+}
+
+.as-toast.as-variant-sticky-note {
+    background-color: #ffff88;
+}
+
+
+.as-toast.as-variant-sticky-note .as-toast-variant-color,
+.as-toast.as-variant-background .as-toast-variant-color {
+    display: none;
+}
+
+.as-toast.as-variant-sticky-note .as-toast-title {
+    color: #1e1ec8;
+}
+
+/*** module: node_modules/absol-acomp/css/variantcolors.css ***/
+:root {
+    --variant-color-primary: #007bff;
+    --variant-color-secondary: #6c757d;
+    --variant-color-success: #28a745;
+    --variant-color-warning: #ffc107;
+    --variant-color-danger: #dc3545;
+    --variant-color-info: #17a2b8;
+    --variant-color-light: #f8f9fa;
+    --variant-color-dark: #343a40;
+    --variant-color-error: #ff4052;
+    --variant-color-link: #007bff;
+    --variant-color-note: #ffff88;
+
+
+    --variant-medium-contract-color-primary: #e2edd5;
+    --variant-medium-contract-color-secondary: #fca75b;
+    --variant-medium-contract-color-success: #fce8e8;
+    --variant-medium-contract-color-info: #fcf5e8;
+    --variant-medium-contract-color-warning: #5e5a75;
+    --variant-medium-contract-color-error:#e0dfce;
+    --variant-medium-contract-color-danger: #e5e8d5;
+    --variant-medium-contract-color-light: #7a5b3c;
+    --variant-medium-contract-color-dark: #bf7d3b;
+    --variant-medium-contract-color-link: #dde8c9;
+    --variant-medium-contract-color-note: #1e1ec8;
+}
+
+/*** module: node_modules/absol-acomp/css/tokenfield.css ***/
+.as-token-field {
+    font-size: 14px;
+    border: 1px solid #dddddd;
+}
+
+.as-token-field-input-text {
+    font: inherit;
+    padding: 0;
+    box-sizing: border-box;
+    min-width: 60px;
+    border: none;
+    outline: none;
+    height: var(--select-box-item-height);
+    line-height: var(--select-box-item-height);
+    vertical-align: top;
+    margin-top: 2px;
+}
+
+.absol-selectbox-item.as-token-field-item {
+    font: inherit;
+    margin: 2px;
+    outline: none;
+}
+
+.as-token-field-item:focus {
+    background-color: var(--select-box-focus-item-color);
+}
+
+
+/*** module: node_modules/absol-acomp/css/trackbar.css ***/
+.absol-trackbar {
+    height: 1.2em;
+    min-width: 7em;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 0 0.6em;
+    box-sizing: border-box;
+}
+
+.absol-trackbar-line {
+    display: block;
+    position: relative;
+    margin-top: 0.4em;
+    height: 0.4em;
+    background-color: rgb(200, 200, 200);
+    -webkit-box-shadow: 0 0 0.2em 0.1em rgb(160, 160, 160) inset;
+    -moz-box-shadow: 0 0 0.2em 0.1em rgb(160, 160, 160) inset;
+    box-shadow: 0 0 0.2em 0.1em rgb(160, 160, 160) inset;
+    border-radius: 0.15em;
+    cursor: pointer;
+}
+
+.absol-trackbar-button {
+    position: absolute;
+    z-index: 1;
+    top: -0.4em;
+    /* bottom: -0.4em; */
+    height: 1.2em;
+    left: 0;
+    margin-left: -0.6em;
+    width: 1.2em;
+    background: rgb(245, 245, 245);
+    cursor: pointer;
+    border-radius: 50%;
+    border: solid 1px rgb(139, 139, 139);
+}
+
+.absol-trackbar.as-disabled {
+    pointer-events: none;
+}
+
+.absol-trackbar.as-disabled .absol-trackbar-button {
+    background: rgb(225, 225, 225);
+    border: solid 1px rgb(200, 200, 200);
+}
+
+.absol-trackbar.as-disabled .absol-trackbar-line {
+    background-color: rgb(220, 220, 220);
+    -webkit-box-shadow: 0 0 0.2em 0.1em rgb(200, 200, 200) inset;
+    -moz-box-shadow: 0 0 0.2em 0.1em rgb(200, 200, 200) inset;
+    box-shadow: 0 0 0.2em 0.1em rgb(200, 200, 200) inset;
+}
+
+/*** module: node_modules/absol-acomp/css/trackbarinput.css ***/
+.absol-trackbar-input {
+    box-sizing: border-box;
+    display: inline-block;
+    white-space: nowrap;
+    position: relative;
+    min-width: 13.5em;
+    height: 2em;
+    --input-width: 4em;
+}
+
+.absol-trackbar-input::after {
+    content: "";
+    vertical-align: middle;
+    height: 100%;
+}
+
+.absol-trackbar-input > .absol-trackbar {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - var(--input-width) - 5px);
+}
+
+
+.absol-trackbar-input > .as-flexicon-input {
+    width: var(--input-width);
+    vertical-align: middle;
+    height: 2em;
+    box-sizing: border-box;
+    margin-left: 5px;
+}
+
+.absol-trackbar-input.as-disabled {
+    pointer-events: none;
+    color: #777777;
+
+}
+
+.absol-trackbar-input input {
+    color: inherit;
+}
+
+
+/*** module: node_modules/absol-acomp/css/treelist.css ***/
+.absol-tree-list {}
+
+.absol-tree-list-item {}
+
+.absol-tree-list-item-parent:hover {
+    background: #efefef;
+    cursor: pointer;
+}
+
+.absol-tree-list-item-parent {
+    padding-left: 0.3em;
+    padding-right: 0.6em;
+    position: relative;
+}
+
+.absol-tree-list-item.active>.absol-tree-list-item-parent {
+    background: #dfdfdf;
+}
+
+.absol-tree-list-item-parent>span {
+    line-height: 20px;
+    white-space: nowrap;
+}
+
+.absol-tree-list-item-child {}
+
+.absol-tree-list-item>.absol-tree-list-item-child:empty {
+    display: none;
+}
+
+.absol-tree-list-item-desc-container {
+    right: 0.3em;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.absol-tree-list-item-desc {
+    font-style: italic;
+    line-height: 20px;
+    white-space: nowrap;
+    margin-left: 1em;
+    color: rgb(37, 37, 37);
+}
+
+.absol-tree-list-item-desc:empty {
+    display: none;
+}
+
+/*** module: node_modules/absol-acomp/css/vruler.css ***/
+/*margin for border size*/
+.as-vruler {
+    position: relative;
+    width: 1.5em;
+    border: solid 1px black;
+    overflow: hidden;
+    font-family: courier, "courier new", monospace;
+    box-sizing: border-box;
+}
+
+
+.as-vruler-line {
+    position: absolute;
+    right: 0;
+    width: 25%;
+    border-top: solid 1px rgb(17, 48, 43);
+    box-sizing: border-box;
+
+}
+
+.as-vruler-line.major {
+    width: 50%;
+    border-top: solid 1px rgb(5, 20, 18);
+}
+
+.as-vruler-major-number {
+    position: absolute;
+    text-align: center;
+    width:  5em;
+    pointer-events: none;
+    font-size: 0.7em;
+    right: calc(52% - 2em);
+    height: 1em;
+    transform-origin: center;
+    
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform:rotate(90deg);
+    transform: rotate(-90deg);
+}
+
+/*** module: node_modules/absol-acomp/css/verticaltreediagram.css ***/
+.as-vertical-tree-diagram {
+    --node-name-max-width: 200px;
+}
+
+
+.as-vertical-tree-diagram-node {
+
+}
+
+.template-ctn {
+    display: none;
+}
+
+.as-vertical-tree-diagram-node, .as-vertical-tree-diagram-node * {
+    box-sizing: border-box;
+}
+
+.as-vertical-tree-diagram-node {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    background: white;
+}
+
+.as-vertical-tree-diagram-child-ctn > .as-vertical-tree-diagram-node:not(:first-child) {
+    margin-left: 10px;
+}
+
+.as-vertical-tree-diagram-node-name-ctn {
+    text-align: center;
+    padding-bottom: 9px;
+}
+
+.as-vertical-tree-diagram-node-name {
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid #333;
+    position: relative;
+    white-space: normal;
+    max-width: var(--node-name-max-width);
+}
+
+.as-vertical-tree-diagram-node.as-has-child > .as-vertical-tree-diagram-node-name-ctn .as-vertical-tree-diagram-node-name::before {
+    content: "";
+    position: absolute;
+    height: 10px;
+    left: 50%;
+    top: 100%;
+    border-left: 1px solid #333;
+}
+
+.as-vertical-tree-diagram-node.as-has-child.as-has-1-child > .as-vertical-tree-diagram-node-name-ctn .as-vertical-tree-diagram-node-name::before {
+    height: 20px;
+}
+
+.as-vertical-tree-diagram-child-ctn {
+    padding-top: 10px;
+
+}
+
+.as-vertical-tree-diagram-node:not(.as-has-1-child) > .as-vertical-tree-diagram-child-ctn {
+    border-top: 1px solid #333;
+}
+
+.as-vertical-tree-diagram-node:not(.as-has-child) > .as-vertical-tree-diagram-child-ctn {
+    display: none;
+}
+
+.as-vertical-tree-diagram-child-ctn > .as-vertical-tree-diagram-node::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    bottom: 100%;
+    height: 10px;
+    border-left: 1px solid black;
+}
+
+.as-vertical-tree-diagram-node.as-has-1-child > .as-vertical-tree-diagram-child-ctn > .as-vertical-tree-diagram-node::before,
+.as-vertical-tree-diagram-node.as-has-1-child > .as-vertical-tree-diagram-child-ctn > .as-vertical-tree-diagram-node::after {
+    display: none;
+}
+
+
+.as-vertical-tree-diagram-child-ctn > .as-vertical-tree-diagram-node:last-child::before {
+    left: unset;
+    right: 50%;
+}
+
+
+.as-vertical-tree-diagram-child-ctn > .as-vertical-tree-diagram-node:first-child::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    right: 50%;
+    left: 0;
+    bottom: 100%;
+    height: 11px;
+    background-color: white;
+}
+
+.as-vertical-tree-diagram-child-ctn > .as-vertical-tree-diagram-node:last-child::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    right: 0;
+    bottom: 100%;
+    height: 11px;
+    background-color: white;
+}
+
+.as-vertical-tree-diagram-child-ctn > .as-vertical-tree-diagram-node:first-child:last-child::after {
+    display: none;
+}
+
+/*** module: node_modules/absol-acomp/css/widthheightresizer.css ***/
+.absol-width-height-resizer {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.absol-width-height-resizer-anchor-bot-right {
+    cursor: nwse-resize;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    height: 13px;
+    width: 13px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAQUlEQVQoz2NgIBGkpaX9Z2IgA9BWU1pa2n+S/UGSZnRFBDVhU4BXEy4bcGrC5ySsmgj5AUMTMZ4mOehhmhjJ0QkA9TYwPsqIBKMAAAAASUVORK5CYII=');
+}
+
+.absol-width-height-resizer-anchor-bot-left {
+    cursor: nesw-resize;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    height: 13px;
+    width: 13px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAABCSURBVChTY0hLS/vPQCJggtIkAco0keRMZMVEa0RXSJRGbIoIaoQpIMlGZEmiNRJSiFUjNkGCGrGaRAAwkq6JgQEAnaEwPtyU/MEAAAAASUVORK5CYII=');
+}
+
+.absol-width-height-resizer-anchor-top-right {
+    cursor: nesw-resize;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    height: 13px;
+    width: 13px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAABMSURBVChTY0xLS/vPQGsAsoQJygYDdFuJdgUhjTgNwqcQpyYQwKURryYQwKaAoCYQwGUjQYCskGhNIABTTJImGABpQolcYgEZmhgYAEPpMD56IPESAAAAAElFTkSuQmCC')
+}
+
+.absol-width-height-resizer-anchor-top-left {
+    cursor: nwse-resize;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 13px;
+    width: 13px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAABNSURBVChTnZFbCgAgCAStw3r/GxQLClaSj/kJckcFBzMvqtKRprwHd6OncRRwN7GfKQFoIS0Ar/gVQGmCYkMpAWgwLYBSWHCPG9GQiDbsRTA+Srvt5gAAAABJRU5ErkJggg==');
+}
+
+.absol-width-height-resizer-content {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+/* .absol-width-height-resizer */
+
