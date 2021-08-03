@@ -165,7 +165,7 @@ function uploadVideo() {
                                 tag: 'input',
                                 class: 'av-file-url',
                                 props: {
-                                    value: 'http://absol.cf/share/No%20Friends%20AMV.mp4'
+                                    value: 'https://absol.cf/share/No%20Friends%20AMV.mp4'
                                 }
                             }]
                     },
