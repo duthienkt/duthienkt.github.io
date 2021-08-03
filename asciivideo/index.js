@@ -127,9 +127,9 @@ function drawConsole(pixels) {
     var offset = 0;
     for (var i = 0; i < consoleHeight; ++i) {
         s = '';
-        if (pixels[offset+3] === 0) break;
+        if (pixels[offset + 3] === 0) break;
         for (var j = 0; j < consoleWidth; ++j) {
-            c = grayTable[rgb2gray(pixels[offset], pixels[offset + 1], pixels[offset + 2], pixels[offset + 3])] ||' ';
+            c = grayTable[rgb2gray(pixels[offset], pixels[offset + 1], pixels[offset + 2], pixels[offset + 3])] || ' ';
             s += c;
             offset += 4;
         }
@@ -158,12 +158,23 @@ function uploadVideo() {
                         }
                     },
                     {
+                        class: 'av-row',
+                        child: [
+                            '<label>URL: </label>',
+                            {
+                                tag: 'input',
+                                class: 'av-file-url',
+                                props: {
+                                    value: 'http://absol.cf/share/No%20Friends%20AMV.mp4'
+                                }
+                            }]
+                    },
+                    {
                         tag: 'flexiconbutton',
-                        class: 'av-play-btn',
+                        class: ['av-play-btn', 'primary'],
                         props: {
                             icon: 'span.mdi.mdi-play',
                             text: 'PLAY',
-                            disabled: true
                         }
                     }
                 ]
@@ -173,14 +184,14 @@ function uploadVideo() {
     }).addTo($dBody);
     var $playBtn = $('.av-play-btn', $modal);
     var $fileIco = $('.av-file-ico', $modal);
+    var $url = $('.av-file-url', $modal);
     var file;
     var $dropzone = $('dropzone', $modal)
         .on('filedrop', function (event) {
             event.preventDefault();
             file = event.files[0];
             if (file && file.type.match(/^video/)) {
-                $playBtn.addClass('primary');
-                $playBtn.disabled = false;
+                $url.value = URL.createObjectURL(file);
                 $fileIco.addStyle('opacity', 1);
             }
         })
@@ -189,8 +200,8 @@ function uploadVideo() {
                 openFileDialog({ accept: 'video/*' }).then(function (files) {
                     if (files && files.length > 0) {
                         file = files[0];
+                        $url.value = URL.createObjectURL(file);
                         $playBtn.addClass('primary');
-                        $playBtn.disabled = false;
                         $fileIco.addStyle('opacity', 1);
                     }
                 });
@@ -199,12 +210,12 @@ function uploadVideo() {
     return new Promise(function (rs) {
         $playBtn.on('click', function () {
             $modal.remove();
-            if (file) rs(file);
+            if ($url.value) rs($url.value);
         })
     })
 }
 
-function playVideo(videoFile) {
+function playVideo(videoURL) {
     var $fps = _({
         class: 'av-fps',
         child: { text: '0FPS' }
@@ -216,7 +227,8 @@ function playVideo(videoFile) {
         tag: 'video',
         class: 'av-video',
         props: {
-            src: URL.createObjectURL(videoFile),
+            src: videoURL,
+            crossOrigin: 'Anonymous',
             playsInline: true
         }
     }).addTo($dBody);
@@ -265,8 +277,7 @@ function playVideo(videoFile) {
             console.log(nCol, nRow)
 
         }
-        else
-        {
+        else {
             nRow = Math.round(screenBound.height / charHeight);
             nCol = Math.round(nRow * vRatio / (charRatio));
         }
