@@ -74,7 +74,7 @@ function makeGrayTable() {
         }
     }).addTo($dBody);
     var ctx = $cv.getContext('2d');
-    ctx.font = '10px Consolas';
+    ctx.font = '10px Consolas,monaco,monospace';
 
     var c, gray;
     var minGray = Infinity, maxGray = -Infinity;
