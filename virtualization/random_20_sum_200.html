@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random</title>
+    <link rel="stylesheet" href="../libs/absol.lite.css">
+    <script src="../libs/absol.lite.js"></script>
+</head>
+<body>
+<style>
+    .chart {
+        width: 100%;
+        height: 400px;
+        min-width: 400px;
+        border: 1px solid black;
+        white-space: normal;
+        margin-bottom: 1em;
+    }
+
+    .point {
+        position: absolute;
+        left: calc(50% - 1em);
+        bottom: 0;
+        width: 2em;
+        height: 2em;
+        text-align: center;
+        line-height: 2;
+        border-radius: 50%;
+        border: 1px solid red;
+    }
+
+    .col {
+        height: 100%;
+        display: inline-block;
+        vertical-align: bottom;
+        position: relative;
+        width: 5%;
+    }
+
+    .title {
+        position: absolute;
+        left: 80%;
+        bottom: 80%
+    }
+</style>
+<script>
+    var _ = absol.coreDom._;
+
+    function random1() {
+        var sum = 200;
+        var res = [];
+        var cr;
+        for (var i = 0; i < 19; ++i) {
+            cr = Math.round(Math.random() * sum);
+            sum -= cr;
+            res.push(cr);
+        }
+        res.push(sum);
+        return res;
+    }
+
+    function random2() {
+        var a = Array(19).fill(0).map(function () {
+            return Math.random() * 200;
+        });
+        a.push(0, 200);
+        a.sort(function (a, b) {
+            return a - b;
+        });
+        var res = [];
+        for (var i = 0; i < a.length - 1; ++i) {
+            res.push(a[i + 1] - a[i]);
+        }
+        return res;
+    }
+
+    function test(fx) {
+        var count = 100000;
+        var A;
+        var S = Array(20).fill(0.0);
+        for (var t = 0; t < count; ++t) {
+            A = fx();
+            for (var i = 0; i < 20; ++i) {
+                S[i] += A[i]
+            }
+        }
+
+        for (var i = 0; i < 20; ++i) {
+            S[i] /= count;
+        }
+
+
+        _({
+            class: 'chart',
+            child: S.map(function (x, i) {
+                return {
+                    class: 'col',
+                    child: {
+                        class: 'point',
+                        style: {
+                            'bottom': 'calc(' + (x / 200 * 100 + '%') + ' - 1em)'
+                        },
+                        child: [{ text: i + 1 + '' },
+                            {
+                                class:'title',
+                                child:{
+                                    text:(x * 1000).toFixed(2)
+                                }
+                            }]
+                    }
+                }
+            })
+        }).addTo(document.body)
+    }
+
+    test(random1);
+    test(random2);
+
+</script>
+</body>
+</html>
